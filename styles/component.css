@@ -33,7 +33,7 @@ body,
 
 .st-pusher {
 	position: relative;
-	left: 0;
+	right: 0;
 	z-index: 99;
 	height: 100%;
 	-webkit-transition: -webkit-transform 0.5s;
@@ -43,10 +43,10 @@ body,
 .st-pusher::after {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	width: 0;
 	height: 0;
-	background:#11110f;
+	background:#2f2227;
 	content: '';
 	opacity: 0;
 	z-index: 999;
@@ -70,7 +70,7 @@ body,
 	visibility: hidden;
 	width: 300px;
 	height: 100%;
-	background:#11110f;
+	background:#2f2227;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 	overflow-y: scroll;
@@ -79,10 +79,10 @@ body,
 .st-menu::after {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #11110f;
+	background: #2f2227;
 	content: '';
 	opacity: 1;
 	-webkit-transition: opacity 0.5s;
@@ -116,34 +116,32 @@ body,
 
 .st-menu ul li a {
 	display: block;
-	padding: 1em 1em 1em 1.2em;
+	padding: 1em 1.2em 1em 1em;
+	padding-left: 60px;
 	outline: none;
 	line-height: 30px;
-	padding-right: 60px;
-	color: #b3b3b3;
+	color: white;
 	text-decoration: none;
 	border-bottom: 1px solid #1d1d1b;
-	background: url('../images/ics/nav-check.png') right center no-repeat;
+	background: url('../assets/images/ics/nav-check.png') left center no-repeat;
 }
-
 
 .st-menu ul li a:hover, .st-menu ul li a.active-nav {
-	background: #08833F url('../images/ics/nav-check-w.png') right center no-repeat;;
-	color:#B3B3B3;
+	background: #9c1c1f url('../assets/images/ics/nav-check-w.png') left center no-repeat;;
+	color:white !important;
 }
-
 .nav-sub{
 	display: none;
 }
 
 .st-effect-3.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(-300px, 0, 0);
-	transform: translate3d(-300px, 0, 0);
+	-webkit-transform: translate3d(300px, 0, 0);
+	transform: translate3d(300px, 0, 0);
 }
 
 .st-effect-3.st-menu {
-	-webkit-transform: translate3d(100%, 0, 0);
-	transform: translate3d(100%, 0, 0);
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
 }
 
 .st-effect-3.st-menu-open .st-effect-3.st-menu {

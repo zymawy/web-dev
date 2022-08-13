@@ -1,5 +1,5 @@
 /*
-* 	Owl Carousel Owl Demo Theme 
+* 	Owl Carousel Owl Demo Theme
 *	v1.3.3
 */
 
@@ -15,7 +15,7 @@
 	display: inline-block;
 	zoom: 1;
 	*display: inline;/*IE7 life-saver */
-	background: #869791;
+	background: #a13436;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.5;
     text-indent: -5000px;
@@ -49,7 +49,7 @@
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	background: #869791;
+	background: #a13436;
 }
 
 .owl-theme .owl-controls .owl-page.active span,
