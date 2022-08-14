@@ -214,7 +214,7 @@ body{
 	padding:0;
 }
 
-#foundation-name {
+#news-name {
 	margin-top: 20px;
 }
 
@@ -264,13 +264,13 @@ li.nav-trigger{
 		height: 90px;
 	}
 
-	h1#foundation-head-name{
+	h1#news-head-name{
 		font-size: 20px;
 		line-height: 30px;
 		margin-bottom: 0;
 	}
 
-	#foundation-head-slogan{
+	#news-head-slogan{
 		font-size: 18px;
 	}
 
@@ -326,12 +326,12 @@ li.nav-trigger{
 	outline: none;
 }
 
-#foundation-head-name{
+#news-head-name{
 	color: #dbe0cc;
 	margin-bottom: 5px;
 }
 
-#foundation-head-slogan{
+#news-head-slogan{
 	margin: 0 !important;
 	color: #e03438;
 }
@@ -432,7 +432,7 @@ li.nav-trigger{
 }
 
 @media all and (max-width: 700px) {
-	#foundation-head-name{
+	#news-head-name{
 		font-size: 2em;
 	}
 }
@@ -511,19 +511,19 @@ a.btn-more{
 	margin-top: 2px !important;
 }
 
-#foundation-trophies{
+#news-trophies{
 	position: relative;
 	background: #7a7a7a;
 	padding: 15px 0 !important;
 }
 
-#foundation-trophies h2{
+#news-trophies h2{
 	margin-top: 30px;
 	margin-bottom:5px;
 	color: #f6f6f6;
 }
 
-#foundation-trophies h4{
+#news-trophies h4{
 	color:#f8f8f8;
 	margin-top: 10px !important;
 }
@@ -577,7 +577,7 @@ a#know-us-more:hover{
 	margin-bottom: 5px;
 }
 
-#foundation-projects{
+#news-projects{
 	background: #fefefe;
 	padding-top: 30px !important;
 	padding-bottom: 30px !important;
@@ -805,9 +805,39 @@ a.photo-gal-item:hover img{
 h3, .h3 {
 	font-size: 20px;
 }
+.flexable {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
 
-
-
+/*this code has been taken from  https://loading.io/css/*/
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+}
+.lds-dual-ring:after {
+	content: " ";
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #e03438;
+	border-color: #e03438 transparent #e03438 transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+	text-align: center;
+}
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
 
 
 
