@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,10 @@
     <link type="text/css" rel="stylesheet" href="styles/component.css" />
     <link type="text/css" rel="stylesheet" href="styles/style.css" />
     <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        const params = new URLSearchParams(location.search),
+            q = params.get('q');
+    </script>
     <!-- CSS Importing -->
 </head>
 
@@ -43,12 +47,12 @@
         <!-- General Container For the Transition menu -->
         <div class="st-pusher">
             <nav class="st-menu st-effect-3" id="main-nav">
-                <h2>News Sections</h2>
+                <h2>Menu</h2>
                 <ul>
-                    <li><a class="active-nav" href="#">Home</a></li>
+                    <li><a class="active-nav" href="/">Home</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Coder News Partners</a></li>
+                    <li><a href="/articles.html">News</a></li>
+                    <li><a href="/search.html">Coder News Partners</a></li>
                 </ul>
                 <ul id="mo-social-links">
                     <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
@@ -66,8 +70,6 @@
                                 type="button">Search</button></span>
                     </div>
                 </ul>
-
-
             </nav>
             <div class="st-content">
                 <div class="st-content-inner">
@@ -80,82 +82,43 @@
                         {{>header }}
                     </script>
                     </div>
+                    <div class="container">
+                        <ul class="uk-breadcrumb">
+                            <li><a href="#">الرئيسية</a> </li>
+                            <li><span class="uk-active">مشاريع الجمعية</span> </li>
+                        </ul>
 
-                    <!-- A Header Partial Could Be Found In   (js/partials/latestNews.js) -->
-                    <div id="container-latest-news">
+                    </div>
+                    <!-- A Header higihLightsSliders Could Be Found In   (js/partials/higihLightsSliders.js) -->
+                    <div id="container-higih-lights">
                         <div class="flexable">
                             <div class="lds-dual-ring"></div>
                         </div>
-                        <script id="latest-news-template" type="text/x-handlebars-template">
-                        {{>latestNews }}
+                        <script id="higih-lights-template" type="text/x-handlebars-template">
+                        {{>higihLightsSliders }}
                     </script>
                     </div>
-                    <section class="container-fluid" id="news-trophies">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 no-pm">
-                                    <div class="col-md-6">
-                                        <h2>Achievement</h2>
-                                        <h4>Our Pride Achievement</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="col-xs-4 trophy-item">
-                                            <a href="#"><img class="img-responsive"
-                                                    src="assets/images/temp/prizes/01.jpg" alt="Trophies">For Developers
-                                                From Developers </a>
-                                        </div>
-                                        <div class="col-xs-4 trophy-item">
-                                            <a href="#"><img class="img-responsive"
-                                                    src="assets/images/temp/prizes/02.jpg" alt="Trophies">For Developers
-                                                From Developers</a>
-                                        </div>
-                                        <div class="col-xs-4 trophy-item">
-                                            <a href="#"><img class="img-responsive"
-                                                    src="assets/images/temp/prizes/03.jpg" alt="Trophies">For Developers
-                                                From Developers </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <br class="clear">
-                    <br>
-                    <!-- A Header Partial Could Be Found In   (js/partials/latestNews.js) -->
-                    <div id="container-featured-news">
+                    <br class="clear"><br>
+                    <div id="container-news">
                         <div class="flexable">
                             <div class="lds-dual-ring"></div>
                         </div>
-                        <script id="featured-news-template" type="text/x-handlebars-template">
-                        {{>featuredNews }}
+                        <script id="news-template" type="text/x-handlebars-template">
+                        {{>news }}
                     </script>
                     </div>
-                    <section class="container-fluid" id="news-projects">
-                        <div id="container-most-visit">
-                            <div class="flexable">
-                                <div class="lds-dual-ring"></div>
-                            </div>
-                            <script id="most-visit-news-template" type="text/x-handlebars-template">
-                            {{>mostVisitNews }}
-                    </script>
-                        </div>
-
-                    </section>
                     <br class="clear">
-                    <br>
-
                     <!-- A Partners Partial Could Be Found In   (js/partials/partners.js) -->
                     <div id="container-partners">
                         <script id="partners-template" type="text/x-handlebars-template">
                         {{>partners }}
                     </script>
                     </div>
-
                     <!-- A Footer Partial Could Be Found In   (js/partials/footer.js) -->
                     <div id="container-footer">
                         <script id="footer-template" type="text/x-handlebars-template">
-                        {{>footer }}
-                    </script>
+                            {{>footer }}
+                        </script>
                     </div>
                 </div>
             </div>
@@ -166,11 +129,10 @@
 
 <!-- Javascript Imporitng -->
 <script type="text/javascript" src="js/partials/header.js"></script>
-<script type="text/javascript" src="js/partials/partners.js"></script>
 <script type="text/javascript" src="js/partials/footer.js"></script>
-<script type="text/javascript" src="js/partials/latestNews.js"></script>
-<script type="text/javascript" src="js/partials/featuredNews.js"></script>
-<script type="text/javascript" src="js/partials/mostVisitNews.js"></script>
+<script type="text/javascript" src="js/partials/partners.js"></script>
+<script type="text/javascript" src="js/partials/higihLightsSliders.js"></script>
+<script type="text/javascript" src="js/partials/news.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/lightbox.min.js"></script>

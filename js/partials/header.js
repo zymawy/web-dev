@@ -9,9 +9,9 @@ Handlebars.registerPartial('header',
                             <li id="st-trigger-effects" class="nav-trigger">
                                 <button data-effect="st-effect-3" id="nav-tr"></button>
                             </li>
-                            <li id="foundation-name">
-                                <h1 id="foundation-head-name">{{ title }}</h1>
-                                <h2 id="foundation-head-slogan">{{ subTitle }}</h2>
+                            <li id="news-name">
+                                <a href='/'> <h1 id="news-head-name">{{ title }}</h1></a>
+                                <h2 id="news-head-slogan">{{ subTitle }}</h2>
                             </li>
                         </ul>
                         <ul class="row f-right" id="social-links">

@@ -36,11 +36,7 @@ document.addEventListener('news-data-loaded', ({ detail }) => {
      * sorted by created at ...
      */
     let news = detail.data()
-        // taken from https://stackoverflow.com/a/46545530/6531160 to shuffle our news randomly
-        .map(value => ({ value, sort: Math.random() }))
-        .sort((a, b) => a.sort - b.sort)
         .sort((a, b) => (a.views - b.views) ? 1 : -1)
-        .map(({ value }) => value)
         .slice(0, 7), featuredNews = news[0];
 
     containerMostVisitNews.empty().append(mostVisitNewsTemplateCompiled({ news }));

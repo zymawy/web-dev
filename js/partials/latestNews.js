@@ -43,7 +43,7 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                 <br class="clear">
                 <br>`);
 
-document.addEventListener('news-data-loaded', ({detail}) => {
+document.addEventListener('news-data-loaded', ({ detail }) => {
     /**
      Compile the template
      */
@@ -58,12 +58,8 @@ document.addEventListener('news-data-loaded', ({detail}) => {
      * sorted by created at ...
      */
     let news = detail.data()
-    // taken from https://stackoverflow.com/a/46545530/6531160 to shuffle our news randomly
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
-    .map(({ value }) => value)
-    .slice(0, 4), featuredNews = news[0];
+        .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
+        .slice(0, 4), featuredNews = news[0];
 
-    containerLatestNews.empty().append(latestNewsTemplateCompiled({news: news.slice(1, 4), featuredNews}));
+    containerLatestNews.empty().append(latestNewsTemplateCompiled({ news: news.slice(1, 4), featuredNews }));
 })

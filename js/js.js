@@ -1,3 +1,31 @@
+fetch('/data/Post.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        return response.json();
+    })
+    .then(response => {
+        // let's get going and notify our main class :)
+        const DataNewsEventLoaded = new CustomEvent('news-data-loaded', {
+            bubbles: true,
+            detail: {
+                data: () =>
+                    response
+                        // taken from https://stackoverflow.com/a/46545530/6531160 to shuffle our news randomly
+                        .map(value => ({ value, sort: Math.random() }))
+                        .sort((a, b) => a.sort - b.sort)
+                        .map(({ value }) => value)
+            }
+        });
+
+        // let's dispatch it !
+        document.dispatchEvent(DataNewsEventLoaded)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
 // JavaScript Document
 $(function () {
     $('#main-nav ul li').click(function () {
@@ -18,16 +46,4 @@ $(function () {
     })
 
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) { event.preventDefault(); $(this).ekkoLightbox(); });
-
-    $("#partners-items").owlCarousel({
-        items: 4,
-        lazyLoad: true,
-        autoPlay: true
-    });
-
-    $("#projects-page-holder").owlCarousel({
-        singleItem: true,
-        lazyLoad: true,
-        autoPlay: true
-    });
 });
