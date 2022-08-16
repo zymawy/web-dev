@@ -20,8 +20,8 @@ Handlebars.registerPartial('header',
                             {{/each}}
                             <br class="clear"><br>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn"><button class="btn btn-default" type="button">Search
+                                <input type="text" id='searchKeyword' class="form-control" placeholder="Search...">
+                                <span class="input-group-btn"><button id='search' class="btn btn-default" type="button">Search
                                 </button></span>
                             </div>
                         </ul>
@@ -51,3 +51,26 @@ const headerData = {
     ]
 }
 containerHeader.empty().append(headerTemplateCompiled(headerData));
+let searchButton = document.getElementById('search'),
+    searchKeyword = document.getElementById('searchKeyword');
+
+searchButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    // let's get the value of the input of the search
+    let kayword = searchKeyword.value;
+    // let's check if the kayword has some value if not le'ts notify our customer !
+    if (!kayword) {
+        alert('Please Type Keyword To Search!');
+        return;
+    }
+    // let's get going and count our string
+    // for quick check we are splting the string into
+    // an array and count the total array..
+    let keywordCount = kayword.split('').length;
+    if (keywordCount < 3) {
+        alert('The Mini of 3 chars needed !');
+        return;
+    }
+
+    window.location.href = '/search.html?search=' + kayword;
+})

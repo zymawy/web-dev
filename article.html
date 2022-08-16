@@ -42,31 +42,12 @@
     <div class="container-fluid st-container" id="st-container">
         <!-- General Container For the Transition menu -->
         <div class="st-pusher">
-            <nav class="st-menu st-effect-3" id="main-nav">
-                <h2>News Sections</h2>
-                <ul>
-                    <li><a class="active-nav" href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Coder News Partners</a></li>
-                </ul>
-                <ul id="mo-social-links">
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/fb.png" alt="Faecbook"> </a> </li>
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/tw.png" alt="Twitter"> </a> </li>
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/yt.png" alt="Youtube"> </a> </li>
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/in.png" alt="Instagram"> </a> </li>
-                    <br class="clear"><br>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn"><button class="btn btn-default"
-                                type="button">Search</button></span>
-                    </div>
-                </ul>
-            </nav>
+            <!-- A Nav Partial Could Be Found In   (js/partials/nav.js) -->
+            <div id="container-nav">
+                <script id="nav-template" type="text/x-handlebars-template">
+                        {{>nav }}
+                        </script>
+            </div>
             <div class="st-content">
                 <div class="st-content-inner">
                     <!-- A Header Partial Could Be Found In   (js/partials/header.js) -->
@@ -80,275 +61,45 @@
                     </div>
                     <div class="container" id="content-container">
                         <div class="row">
+                            <!-- A Single New Partial Could Be Found In   (js/partials/singleNew.js) -->
+                            <div id="container-single-new-aside">
+                                <div class="flexable">
+                                    <div class="lds-dual-ring"></div>
+                                </div>
+                                <script id="single-new-aside-template" type="text/x-handlebars-template">
+                                {{>singleNewASide }}
+                            </script>
+                            </div>
                             <div class="col-md-8" id="content-bar">
                                 <ul class="uk-breadcrumb">
                                     <li><a href="#">الرئيسية</a> </li>
                                     <li><a href="#">مركز الأخبار</a> </li>
                                     <li><span class="uk-active">أخبار محلية</span> </li>
                                 </ul>
-                                <article class="uk-article">
-                                    <h1 class="uk-article-title green-title">حالة تأهب قصوى بفرنسا ومسيرات عارمة تعم
-                                        قصوى بفرنسا ومسيرات البلاد</h1>
-                                    <p class="uk-article-meta">اضفيت بتاريخ: 22/5/2015 | ضمن تصنيف: <a href="#">أخبار
-                                            محلية</a> </p>
-                                    <p class="uk-article-lead"><img class="img-responsive"
-                                            src="assets/images/temp/article/01.jpg" alt="Article Image"></p>
-                                    <p>مشاركة المقال عبر:
-                                        <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
-                                        <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
-                                    </p>
-
-                                    <hr class="uk-article-divider">
-                                    <p>أعلنت السلطات الفرنسية اليوم السبت أنها ستبقي على حالة التأهب القصوى عقب الأحداث
-                                        الدامية التي شهدتها البلاد خلال الأيام الثلاثة الماضية، في حين خرج أكثر من مائتي
-                                        ألف شخص في مسيرات عمت عددا من المدن تضامنا مع القتلى الـ17 الذين سقطوا في تلك
-                                        الأحداث.
-                                        وأعلن وزير الداخلية برنار كازونوف، عقب اجتماع خلية الأزمة، أن بلاده تبقي حالة
-                                        الإنذار على أعلى مستوى في خطة مكافحة "الإرهاب" موضحا أن السلطات ستعزز الأمن بكل
-                                        الوسائل البشرية والمادية. كما دعا الفرنسيين للمشاركة في مظاهرة حاشدة غدا الأحد
-                                        ضد ما يوصف بالإرهاب.
-                                        وأعلن عدد من القادة والزعماء عبر العالم -أبرزهم من ألمانيا وبريطانيا وتركيا
-                                        والغابون وإيطاليا وإسبانيا والنمسا- مشاركتهم في مسيرة الغد في باريس تضامنا مع
-                                        فرنسا التي شهدت هجوما داميا على صحيفة شارلي إيبدو، أعقبته عمليتا احتجاز رهائن في
-                                        باريس انتهتا أمس بمقتل الخاطفين وأربع رهائن على الأقل.</p>
-
-                                    <hr class="uk-article-divider">
-                                    <p>
-                                    <h2>كازونوف، عقب اجتماع خلية الأزمة، أن بلاده تبقي</h2>
-                                    وكان الرئيس الفرنسي فرانسوا هولاند دعا أمس، وبعد اجتماع خلية الأزمة في قصر الإليزيه
-                                    غداة يوم حداد وطني "كل المواطنين" إلى التظاهر الأحد في مسيرات للتنديد "بالمجزرة"
-                                    التي أعلنت السلطات الفرنسية اليوم السبت أنها ستبقي على حالة التأهب القصوى عقب
-                                    الأحداث الدامية التي شهدتها البلاد خلال الأيام الثلاثة الماضية، في حين خرج أكثر من
-                                    مائتي ألف شخص في مسيرات عمت عددا من المدن تضامنا مع القتلى الـ17 الذين سقطوا في تلك
-                                    الأحداث.
-                                    وأعلن وزير الداخلية برنار كازونوف، عقب اجتماع خلية الأزمة، أن بلاده تبقي حالة
-                                    الإنذار على أعلى مستوى في خطة مكافحة "الإرهاب" موضحا أن السلطات ستعزز الأمن بكل
-                                    الوسائل البشرية والمادية. كما دعا الفرنسيين للمشاركة في مظاهرة حاشدة غدا الأحد ضد ما
-                                    يوصف بالإرهاب.
-                                    وأعلن عدد من القادة والزعماء عبر العالم -أبرزهم من ألمانيا وبريطانيا وتركيا والغابون
-                                    وإيطاليا وإسبانيا والنمسا- مشاركتهم في مسيرة الغد في باريس تضامنا مع فرنسا التي شهدت
-                                    هجوما داميا على صحيفة شارلي إيبدو، أعقبته عمليتا احتجاز رهائن في باريس انتهتا أمس
-                                    بمقتل الخاطفين وأربع رهائن على الأقل.</p>
-                                    <hr class="uk-article-divider">
-                                    <p>وكان الرئيس الفرنسي فرانسوا هولاند دعا أمس، وبعد اجتماع خلية الأزمة في قصر
-                                        الإليزيه غداة يوم حداد وطني "كل المواطنين" إلى التظاهر الأحد في مسيرات للتنديد
-                                        "بالمجزرة" التي حصلت في مقر الصحيفة الفرنسية الساخرة، مشيرا إلى أنها لإثبات
-                                        "الوحدة الوطنية ضد الإرهاب".</p>
-                                </article>
-                                <br class="clear">
-                                <br>
-                                <h2 class="block-title green-title"><img class="block-icon"
-                                        src="assets/images/ics/comments.png">تعليقات القراء: </h2>
-                                <br>
-                                <br class="clear">
-                                <div class="comment-item">
-                                    <div class="col-xs-1 comment-avatar"></div>
-                                    <div class="col-xs-10 comment-info">
-                                        <h3 class="green-title">اسم المعلق هنا في سطر واحد او سطرين</h3>
-                                        <p class="uk-article-meta">ادخل بتاريخ: 22/5/2015</p>
-                                        <p>وكان الرئيس الفرنسي فرانسوا هولاند دعا أمس، وبعد اجتماع خلية الأزمة في قصر
-                                            الإليزيه غداة يوم حداد وطني "كل المواطنين" إلى التظاهر الأحد في مسيرات
-                                            للتنديد "بالمجزرة" التي حصلت في مقر الصحيفة الفرنسية الساخرة، مشيرا إلى أنها
-                                            لإثبات "الوحدة الوطنية ضد الإرهاب".</p>
+                                <!-- A Single New Partial Could Be Found In   (js/partials/singleNew.js) -->
+                                <div id="container-single-new">
+                                    <div class="flexable">
+                                        <div class="lds-dual-ring"></div>
                                     </div>
-                                    <br class="clear">
-
+                                    <script id="single-new-template" type="text/x-handlebars-template">
+                                        {{>singleNew }}
+                                    </script>
                                 </div>
-                                <div class="comment-item">
-                                    <div class="col-xs-1 comment-avatar"></div>
-                                    <div class="col-xs-10 comment-info">
-                                        <h3 class="green-title">اسم المعلق هنا في سطر واحد او سطرين</h3>
-                                        <p class="uk-article-meta">ادخل بتاريخ: 22/5/2015</p>
-                                        <p>وكان الرئيس الفرنسي فرانسوا هولاند دعا أمس، وبعد اجتماع خلية الأزمة في قصر
-                                            الإليزيه غداة يوم حداد وطني "كل المواطنين" إلى التظاهر الأحد في مسيرات
-                                            للتنديد "بالمجزرة" التي حصلت في مقر الصحيفة الفرنسية الساخرة، مشيرا إلى أنها
-                                            لإثبات "الوحدة الوطنية ضد الإرهاب".</p>
-                                    </div>
-                                    <br class="clear">
 
+                                <!-- A Single New Comment Partial Could Be Found In   (js/partials/singleNew.js) -->
+                                <div id="container-single-new-comment">
+                                    <div class="flexable">
+                                        <div class="lds-dual-ring"></div>
+                                    </div>
+                                    <script id="single-new-comment-template" type="text/x-handlebars-template">
+                                        {{>singleNewComments }}
+                                    </script>
                                 </div>
-                                <br class="clear">
-                                <h2 class="block-title green-title"><img class="block-icon"
-                                        src="assets/images/ics/comments.png">أضف تعليقك: </h2>
-                                <br>
-                                <br class="clear">
-                                <form id="article-comment-post">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="footer-contact-name"
-                                            placeholder="اسمك الكريم">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="footer-contact-email"
-                                            placeholder="بريدك الالكتروني">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="footer-contact-message" rows="5"
-                                            placeholder="نص الرسالة"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-lg btn-green">اضف تعليك الان</button>
-                                </form>
 
                             </div>
-                            <aside class="col-md-4 no-pm" id="sidebar">
-                                <div class="sidebar-block">
-                                    <h2 class="green-title block-title"><img class="block-icon"
-                                            src="assets/images/ics/news.png" alt="News">أخبار و أنشطة الجمعية</h2>
-                                    <br>
-                                    <div class="news-latest">
-                                        <a href="#" class="big-news-image"><img class="img-responsive"
-                                                src="assets/images/temp/news/01.jpg" alt="News Image"></a>
-                                        <a href="#">
-                                            <h2 class="green-title">السوريون بالريحانية.. يأس وبرد وخذلان</h2>
-                                        </a>
-                                        <span>اضفيت بتاريخ: 22/5/2015 | تصنيف: <a href="#" class="green-title">أخبار
-                                                محلية</a></span>
-                                        <p>يتابع بعدما صمت قليلا "يقول لي ابني أنا بردان ولا أستطيع تقديم شيء له، نحن
-                                            شعب ظلم، لا نريد الطعام والشراب، نريد الدفء لصغارنا". أما الليل أن
-                                    </div>
-                                    <div class="news-latest">
-                                        <nav class="footer-nav">
-                                            <li><a href="#">نوان أحد الاخبار هنا في سطر واحد المشرهنا في سطر واحد
-                                                    المشروع هنا في أحد وع هنا في أحد</a> </li>
-                                            <li><a href="#">نوان أحد الاخبار هنا في سطر واحد المشرهنا في سطر واحد
-                                                    المشروع هنا في أحد وع هنا في أحد</a> </li>
-                                            <li><a href="#">نوان أحد الاخبار هنا في سطر واحد المشرهنا في سطر واحد
-                                                    المشروع هنا في أحد وع هنا في أحد</a> </li>
-                                            <li><a href="#">نوان أحد الاخبار هنا في سطر واحد المشرهنا في سطر واحد
-                                                    المشروع هنا في أحد وع هنا في أحد</a> </li>
-                                        </nav>
-                                        <br class="clear">
-                                        <a href="#" class="btn btn-lg btn-green f-left">أرشيف الاخبار</a>
-                                        <br class="clear">
-                                        <br>
-                                    </div>
-                                </div>
-                                <div class="sidebar-block reusable-block" id="horonr-board">
-                                    <h2 class="block-title white-title" style="background: Transparent !important;">
-                                        <img class="block-icon" src="assets/images/ics/honor.png" alt="Honor">لائحة
-                                        الشرف
-                                    </h2>
-                                    <br class="clear">
-                                    <br>
-                                    <a href="#"><img src="assets/images/temp/honor.jpg" class="img-responsive"
-                                            alt="Honor Image"></a>
-                                    <br>
-                                    <a href="#">
-                                        <h3 class="block-titile white-title">اسم الشخص المراد تكريمه هنا في سطر واحد او
-                                            سطرين</h3>
-                                    </a>
-                                    <p>يتابع بعدما صمت قليلا "يقول لي ابني أنا بردان أستطيع تقديم شيء له ابني أنا بردان
-                                        ابني أناا بردان</p>
-                                </div>
-                                <div class="sidebar-block reusable-block" id="reports">
-                                    <h2 class="block-title green-title"><img class="block-icon"
-                                            src="assets/images/ics/reports.png" alt="Reports">تقارير و احصائيات</h2>
-                                    <ul class="col-sm-12 reports-list">
-                                        <li class="rep-item">
-                                            <a class="col-xs-3 rep-dl" href="#"></a>
-                                            <p class="col-xs-9 rep-desc">يتابع بعدما صمت قليلا "يقول لي ابني أنا بردان
-                                                ولا أستطيع تقديم شيء له</p>
-                                            <br class="clear">
-                                        </li>
-                                        <li class="rep-item">
-                                            <a class="col-xs-3 rep-dl" href="#"></a>
-                                            <p class="col-xs-9 rep-desc">يتابع بعدما صمت قليلا "يقول لي ابني أنا بردان
-                                                ولا أستطيع تقديم شيء له له</p>
-                                            <br class="clear">
-                                        </li>
-                                        <li class="rep-item">
-                                            <a class="col-xs-3 rep-dl" href="#"></a>
-                                            <p class="col-xs-9 rep-desc">يتابع بعدما صمت قليلا "يقول لي ابني أنا بردان
-                                                ولا أستطيع تقديم شيء له</p>
-                                            <br class="clear">
-                                        </li>
-                                        <li class="rep-item">
-                                            <a class="col-xs-3 rep-dl" href="#"></a>
-                                            <p class="col-xs-9 rep-desc">يتابع بعدما صمت قليلا "يقول لي ابني أنا بردان
-                                                ولا أستطيع تقديم شيء له</p>
-                                            <br class="clear">
-                                        </li>
-                                    </ul>
-                                    <br class="clear">
-
-                                </div>
-                                <br class="clear">
-                                <div class="sidebar-block reusable-block" id="polls">
-                                    <h2 class="block-title green-title"> <img class="block-icon"
-                                            src="assets/images/ics/polls.png" alt="Honor">استطلاعات رأي</h2>
-                                    <div class="panel">
-                                        <div class="panel-body">
-                                            <p>يتابع بعدما صمت قليلا "يقول لي ابني أنا بردان ولا أستطيع تقديم شيء له
-                                                ابني أنا بردان ابني أنا بردان ابني أنا بردان</p>
-                                        </div>
-                                    </div>
-                                    <div class="poll-options">
-                                        <ul class="list-group">
-                                            <li class="list-group-item">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios">
-                                                    يتابع بعدما صمت قليلا "يقول لي ابني
-                                                </label>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios">
-                                                    يتابع بعدما صمت قليلا "يقول لي ابني
-                                                </label>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios">
-                                                    يتابع بعدما صمت قليلا "يقول لي ابني
-                                                </label>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios">
-                                                    يتابع بعدما صمت قليلا "يقول لي ابني
-                                                </label>
-                                            </li>
-                                        </ul>
-                                        <a href="#" class="btn btn-lg btn-green"><img
-                                                src="assets/images/ics/arr-btn.png"> اضف صوتك الان</a> | <a href="#"
-                                            id="view-poll-results">شاهد نتائج التصويت</a>
-                                    </div>
-                                    <div class="poll-results">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success progress-bar-striped"
-                                                role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 40%">
-                                                <span class="sr-only">40% Complete (success)</span>
-                                            </div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-info progress-bar-striped"
-                                                role="progressbar" aria-valuenow="20" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 20%">
-                                                <span class="sr-only">20% Complete</span>
-                                            </div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-warning progress-bar-striped"
-                                                role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 60%">
-                                                <span class="sr-only">60% Complete (warning)</span>
-                                            </div>
-                                        </div>
-                                        <div class="progress">
-
-                                            <div class="progress-bar progress-bar-danger progress-bar-striped"
-                                                role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100" style="width: 80%">
-                                                <span class="sr-only">80% Complete (danger)</span>
-                                            </div>
-                                        </div>
-                                        <a href="#" id="back-to-vote">عودة للتصويت</a>
-                                    </div>
-                                </div>
-                            </aside>
                         </div>
                     </div>
-                    <!-- A Header Partial Could Be Found In   (js/partials/footer.js) -->
+                    <!-- A Footer Partial Could Be Found In   (js/partials/footer.js) -->
                     <div id="container-footer">
                         <script id="footer-template" type="text/x-handlebars-template">
                             {{>footer }}
@@ -362,11 +113,11 @@
 </body>
 
 <!-- Javascript Imporitng -->
+<script type="text/javascript" src="js/handlebarHeplers.js"></script>
 <script type="text/javascript" src="js/partials/header.js"></script>
+<script type="text/javascript" src="js/partials/nav.js"></script>
 <script type="text/javascript" src="js/partials/footer.js"></script>
-<script type="text/javascript" src="js/partials/latestNews.js"></script>
-<script type="text/javascript" src="js/partials/featuredNews.js"></script>
-<script type="text/javascript" src="js/partials/partners.js"></script>
+<script type="text/javascript" src="js/partials/signleNew.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/lightbox.min.js"></script>
@@ -374,27 +125,5 @@
 <script type="text/javascript" src="js/sidebarEffects.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
 <!-- Javascript Imporitng -->
-<script type="text/javascript">
-    var revapi;
-    jQuery(document).ready(function () {
-        revapi = jQuery('.main-slider').revolution(
-            {
-                delay: 7000,
-                startwidth: 1170,
-                startheight: 630,
-                hideThumbsOnMobile: "on",
-                hideBulletsOnMobile: "on",
-                hideArrowsOnMobile: "on",
-                fullWidth: "on",
-                forceFullWidth: "on",
-                navigationType: "none",
-                navigationArrows: "solo",
-                navigationStyle: "none",
-                touchenabled: "on",
-                hideAllCaptionAtLimit: "on",
-                hideThumbsUnderResoluition: "640"
-            });
-    });
-</script>
 
 </html>

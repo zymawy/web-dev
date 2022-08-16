@@ -46,31 +46,12 @@
     <div class="container-fluid st-container" id="st-container">
         <!-- General Container For the Transition menu -->
         <div class="st-pusher">
-            <nav class="st-menu st-effect-3" id="main-nav">
-                <h2>Menu</h2>
-                <ul>
-                    <li><a class="active-nav" href="/">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="/articles.html">News</a></li>
-                    <li><a href="/search.html">Coder News Partners</a></li>
-                </ul>
-                <ul id="mo-social-links">
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/fb.png" alt="Faecbook"> </a> </li>
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/tw.png" alt="Twitter"> </a> </li>
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/yt.png" alt="Youtube"> </a> </li>
-                    <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                                src="assets/images/ics/in.png" alt="Instagram"> </a> </li>
-                    <br class="clear"><br>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn"><button class="btn btn-default"
-                                type="button">Search</button></span>
-                    </div>
-                </ul>
-            </nav>
+            <!-- A Nav Partial Could Be Found In   (js/partials/nav.js) -->
+            <div id="container-nav">
+                <script id="nav-template" type="text/x-handlebars-template">
+                {{>nav }}
+                </script>
+            </div>
             <div class="st-content">
                 <div class="st-content-inner">
                     <!-- A Header Partial Could Be Found In   (js/partials/header.js) -->
@@ -129,6 +110,8 @@
 
 <!-- Javascript Imporitng -->
 <script type="text/javascript" src="js/partials/header.js"></script>
+<script type="text/javascript" src="js/handlebarHeplers.js"></script>
+<script type="text/javascript" src="js/partials/nav.js"></script>
 <script type="text/javascript" src="js/partials/footer.js"></script>
 <script type="text/javascript" src="js/partials/partners.js"></script>
 <script type="text/javascript" src="js/partials/higihLightsSliders.js"></script>

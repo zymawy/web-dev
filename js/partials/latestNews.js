@@ -8,11 +8,11 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                             </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="#" class="d-block mb-30">
+                                <a href="/article.html?id={{ featuredNews.id }}" class="d-block mb-30">
                                     <img src="{{ featuredNews.image }}" class="img-responsive" alt="{{ featuredNews.title }}">
                                 </a>
                                 <h3 class="red-title">
-                                    <a href="{{ featuredNews.url }}">{{ featuredNews.title }}</a>
+                                    <a href="/article.html?id={{ featuredNews.id }}">{{ featuredNews.title }}</a>
                                 </h3>
                                 <p>{{ featuredNews.description }}</p>
                                 <br>
@@ -21,11 +21,11 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                              {{#each news}}
                                 <div class="col-md-12 no-pm mb-30">
                                     <h3 class="red-title">
-                                        <a href="{{this.url}}">{{this.title}}</a>
+                                        <a href="/article.html?id={{ id }}">{{this.title}}</a>
                                     </h3>
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <a href="#">
+                                            <a href="/article.html?id={{ id }}">
                                                 <img class="wide" src="{{this.image}}" alt="{{this.title}}">
                                             </a>
                                         </div>

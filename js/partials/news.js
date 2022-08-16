@@ -8,9 +8,9 @@ Handlebars.registerPartial('news',
         <br>
         {{#each news}}
             <div class="col-sm-4 slide-item">
-                <a href="#"><img class="img-responsive" src="{{ image }}"
+                <a href="/article.html?id={{ id }}"><img class="img-responsive" src="{{ image }}"
                         alt="{{ image }}"></a>
-                <a href="{{ url }}" target='_blank'>
+                <a href="/article.html?id={{ id }}">
                     <h4 class="green-title">{{ title }}</h4>
                 </a>
             </div>

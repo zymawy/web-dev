@@ -12,9 +12,9 @@ Handlebars.registerPartial('featuredNews',
                         <div id="lt-news">
                         {{#each slidersNews }}
                             <div class="lt-news-item">
-                                <a href="{{url}}" class="big-news-image"><img class="img-responsive" src="{{ image }}" alt="{{ title }}"></a>
-                                <a href="{{url}}"><h1 class="red-title">{{ title }}</h1></a>
-                                <span>Added At: {{ createdAt }} | Category: <a href="{{ url }}" class="red-title">{{ tagsStr }}</a> </span>
+                                <a href="/article.html?{{ slugify title }}&id={{ id }}" class="big-news-image"><img class="img-responsive" src="{{ image }}" alt="{{ title }}"></a>
+                                <a href="/article.html?{{ slugify title }}&id={{ id }}"><h1 class="red-title">{{ title }}</h1></a>
+                                <span>Added At: {{ createdAt }} | Category: <a href="{/article.html?id={{ id }}" class="red-title">{{ tagsStr }}</a> </span>
                                 <p></p>
                             </div>
                         {{/each }}
@@ -23,9 +23,9 @@ Handlebars.registerPartial('featuredNews',
                         <div class="col-md-6 no-pm">
                         {{#each latestNews}}
                             <div class="col-xs-6 more-news-block" >
-                                <a href="{{ url }}" target='_blank' class="more-news-img"><img src="{{ image }}" alt="{{ title }}"></a>
-                                <a href="{{ url }}" target='_blank'><h3 class="red-title">{{ title }}</h3></a>
-                                <p>Added At: {{ createdAt }} | Category: <a href="{{ url }}" class="red-title">{{ tagsStr }}</a> </p>
+                                <a href="/article.html?id={{ id }}" class="more-news-img"><img src="{{ image }}" alt="{{ title }}"></a>
+                                <a href="/article.html?id={{ id }}"><h3 class="red-title">{{ title }}</h3></a>
+                                <p>Added At: {{formatDate createdAt }} | Category: <a href="/article.html?id={{ id }}" class="red-title">{{ tagsStr }}</a> </p>
                             </div>
                         {{/each }}
                         </div>
