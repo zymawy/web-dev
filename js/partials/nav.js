@@ -21,8 +21,8 @@ Handlebars.registerPartial('nav',
                     src="assets/images/ics/in.png" alt="Instagram"> </a> </li>
         <br class="clear"><br>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search...">
-            <span class="input-group-btn"><button class="btn btn-default"
+            <input type="text" id='searchKeywordMobile' class="form-control" placeholder="Search...">
+            <span class="input-group-btn"><button id='searchMobile' class="btn btn-default"
                     type="button">Search</button></span>
         </div>
     </ul>

@@ -11,8 +11,8 @@ Handlebars.registerPartial('mostVisitNews', ` <div class="container" id="news-pr
                              <div class="col-md-12 slide-holder" id="projects-items">
                              {{#each news}}
                                  <div class="slide-item">
-                                    <a href="/article.html?id={{ id }}"><img src="{{ image }}" alt="{{ title }}"></a>
-                                    <a href="/article.html?id={{ id }}"><h4 class="red-title">{{ title }}</h4></a>
+                                    <a href="{{buildUrl this 'news'}}"><img src="{{ image }}" alt="{{ title }}"></a>
+                                    <a href="{{buildUrl this 'news'}}"><h4 class="red-title">{{ title }}</h4></a>
                                 </div>
                              {{/each}}
 

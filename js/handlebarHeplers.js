@@ -36,3 +36,18 @@ Handlebars.registerHelper('buildUrl', (n, source, options) => {
             return '/'
     }
 });
+
+
+Handlebars.registerHelper('stringWithDefault', (string, defaultString, options) => {
+
+
+    return ![null, '', ""].includes(string) ? string : defaultString;
+});
+
+
+Handlebars.registerHelper('getQuery', (string, defaultString, options) => {
+
+    const queries = new URLSearchParams(location.search),
+        input = queries.get(string);
+    return input ?? defaultString;
+});

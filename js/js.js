@@ -1,3 +1,29 @@
+// a gloable fucntion to help us, perform a search by just give the input id, input text
+function doSearch(inputId = 'search', inputText = 'searchKeyword') {
+    let searchButton = document.getElementById(inputId),
+        searchKeyword = document.getElementById(inputText);
+
+    searchButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        // let's get the value of the input of the search
+        let kayword = searchKeyword.value;
+        // let's check if the kayword has some value if not le'ts notify our customer !
+        if (!kayword) {
+            alert('Please Type Keyword To Search!');
+            return;
+        }
+        // let's get going and count our string
+        // for quick check we are splting the string into
+        // an array and count the total array..
+        let keywordCount = kayword.split('').length;
+        if (keywordCount < 3) {
+            alert('The Mini of 3 chars needed !');
+            return;
+        }
+
+        window.location.href = '/search.html?search=' + kayword;
+    })
+}
 fetch('/data/Post.json')
     .then(response => {
         if (!response.ok) {
@@ -47,3 +73,6 @@ $(function () {
 
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) { event.preventDefault(); $(this).ekkoLightbox(); });
 });
+
+doSearch();
+doSearch('searchMobile', 'searchKeywordMobile');

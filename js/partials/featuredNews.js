@@ -12,9 +12,9 @@ Handlebars.registerPartial('featuredNews',
                         <div id="lt-news">
                         {{#each slidersNews }}
                             <div class="lt-news-item">
-                                <a href="/article.html?{{ slugify title }}&id={{ id }}" class="big-news-image"><img class="img-responsive" src="{{ image }}" alt="{{ title }}"></a>
-                                <a href="/article.html?{{ slugify title }}&id={{ id }}"><h1 class="red-title">{{ title }}</h1></a>
-                                <span>Added At: {{ createdAt }} | Category: <a href="{/article.html?id={{ id }}" class="red-title">{{ tagsStr }}</a> </span>
+                                <a href="{{buildUrl this 'news'}}" class="big-news-image"><img class="img-responsive" src="{{ image }}" alt="{{ title }}"></a>
+                                <a href="{{buildUrl this 'news'}}"><h1 class="red-title">{{ title }}</h1></a>
+                                <span>Added At: {{ formatDate createdAt }} | Category: <a href="{{ buildUrl this 'search' }}" class="red-title">{{ tagsStr }}</a> </span>
                                 <p></p>
                             </div>
                         {{/each }}
@@ -23,8 +23,8 @@ Handlebars.registerPartial('featuredNews',
                         <div class="col-md-6 no-pm">
                         {{#each latestNews}}
                             <div class="col-xs-6 more-news-block" >
-                                <a href="/article.html?id={{ id }}" class="more-news-img"><img src="{{ image }}" alt="{{ title }}"></a>
-                                <a href="/article.html?id={{ id }}"><h3 class="red-title">{{ title }}</h3></a>
+                                <a href="{{ buildUrl this 'news' }}" class="more-news-img"><img src="{{ image }}" alt="{{ title }}"></a>
+                                <a href="{{ buildUrl this 'news' }}"><h3 class="red-title">{{ title }}</h3></a>
                                 <p>Added At: {{formatDate createdAt }} | Category: <a href="/article.html?id={{ id }}" class="red-title">{{ tagsStr }}</a> </p>
                             </div>
                         {{/each }}

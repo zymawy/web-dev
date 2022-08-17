@@ -35,72 +35,12 @@ Handlebars.registerPartial('footer',
                                     </button>
                                 </form>
                             </div>
-                            <div class="col-lg-5  footer-block" id="footer-info">
-                            <div class="col-md-4 col-lg-5 reusable-block" id="polls">
-                            <h2 class="block-title red-title"> <img class="block-icon"
-                                                                    src="assets/images/ics/polls.png"
-                                                                    alt="Honor">Polls & Questions
-                            </h2>
-                            <br class="clear">
-                            <br>
-                            <div class="panel">
-                                <div class="panel-body">
-                                    <p>For Developers From Developers For Developers From Developers</p>
-                                </div>
-                            </div>
-                            <div class="poll-options">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                            <label>
-                                                <input type="radio" name="optionsRadios">
-                                                For Developers From Developers
-                                            </label>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <label>
-                                            <input type="radio" name="optionsRadios">
-                                            For Developers From Developers
-                                        </label>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <label>
-                                            <input type="radio" name="optionsRadios">
-                                            For Developers From Developers
-                                        </label>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <label>
-                                            <input type="radio" name="optionsRadios">
-                                            For Developers From Developers
-                                        </label>
-                                    </li>
-                                </ul>
-                                <a href="#" class="btn btn-lg btn-red"> Submit vote </a> | <a href="#"
-                                                                                        id="view-poll-results">See Votes Results</a>
-                            </div>
-                            <div class="poll-results">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                        <span class="sr-only">40% Complete (success)</span>
-                                    </div>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                        <span class="sr-only">20% Complete</span>
-                                    </div>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                        <span class="sr-only">60% Complete (warning)</span>
-                                    </div>
-                                </div>
-                                <div class="progress">
 
-                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                        <span class="sr-only">80% Complete (danger)</span>
-                                    </div>
-                                </div>
-                                <a href="#" id="back-to-vote">back to vote</a>
+                            <div class="col-lg-4  footer-block" id="footer-info">
+                                    <h1>Coder News </h1>
+                                    <hr class="uk-article-divider">
+                                    © 2012 - 2022 Coder News
+                                    A division of dotdev inc.
                             </div>
                         </div>
 

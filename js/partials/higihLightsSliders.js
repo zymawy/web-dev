@@ -8,15 +8,15 @@ Handlebars.registerPartial('higihLightsSliders',
         {{#each highLights}}
             <div class="project-item">
                 <div class="col-sm-6">
-                    <a href="/article.html?id={{ id }}">
+                    <a href="{{ buildUrl this 'news' }}">
                         <h1 class="green-title">{{ title }}</h1>
                     </a>
                     <p>{{ title }}</p>
-                    <a href="/article.html?id={{ id }}" terget="_blank" class="btn btn-lg btn-green">Countune Reading...</a>
+                    <a href="{{ buildUrl this 'news' }}" terget="_blank" class="btn btn-lg btn-green">Countune Reading...</a>
                 </div>
                 <br>
                 <div class="col-sm-6">
-                    <a href="#"><img class="img-responsive"
+                    <a href="{{ buildUrl this 'news' }}"><img class="img-responsive"
                             src="{{ image }}" alt="{{ title }}"> </a>
                 </div>
             </div>
