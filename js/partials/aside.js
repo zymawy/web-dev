@@ -1,9 +1,10 @@
-
-Handlebars.registerPartial('singleNewASide',
-    ` <aside class="no-pm" id="sidebar">
+/**
+ * The Single New Aside Partial
+ */
+Handlebars.registerPartial('singleNewASide', ` <aside class="no-pm" id="sidebar">
 <div class="sidebar-block">
     <h2 class="green-title block-title"><img class="block-icon"
-            src="assets/images/ics/news.png" alt="News">Smilier News</h2>
+            src="/assets/images/ics/news.png" alt="News">Smilier News</h2>
     <br>
     {{#each smilierNews}}
     <div class="news-latest">
@@ -17,18 +18,17 @@ Handlebars.registerPartial('singleNewASide',
 </div>
     {{/each}}
 </div>
-</aside>`
-);
+</aside>`);
 
-document.addEventListener('aside-needed', ({ detail }) => {
+document.addEventListener('aside-needed', ({detail}) => {
+    // let's get going and add some similar news
+    // in aside of
     let smilierNews = detail.data().slice(0, 2);
 
     // aside section
     const containerSingleNewAside = $('#container-single-new-aside'),
         singleNewAsideTemplate = $('#single-new-aside-template');
-    const singleNewAsideTemplateCompiled = Handlebars.compile(
-        singleNewAsideTemplate.html()
-    );
+    const singleNewAsideTemplateCompiled = Handlebars.compile(singleNewAsideTemplate.html());
 
-    containerSingleNewAside.empty().append(singleNewAsideTemplateCompiled({ smilierNews }));
+    containerSingleNewAside.empty().append(singleNewAsideTemplateCompiled({smilierNews}));
 })

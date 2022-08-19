@@ -1,3 +1,4 @@
+/* Registering a partial template with the name `latestNews` */
 Handlebars.registerPartial('latestNews', `<section class="container" id="welcome-section">
                     <div class="row">
                         <div class="col-md-12">
@@ -43,7 +44,7 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                 <br class="clear">
                 <br>`);
 
-document.addEventListener('news-data-loaded', ({ detail }) => {
+document.addEventListener('news-data-loaded', ({detail}) => {
     /**
      Compile the template
      */
@@ -58,8 +59,8 @@ document.addEventListener('news-data-loaded', ({ detail }) => {
      * sorted by created at ...
      */
     let news = detail.data()
-        .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
-        .slice(0, 4), featuredNews = news[0];
+    .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
+    .slice(0, 4), featuredNews = news[0];
 
-    containerLatestNews.empty().append(latestNewsTemplateCompiled({ news: news.slice(1, 4), featuredNews }));
+    containerLatestNews.empty().append(latestNewsTemplateCompiled({news: news.slice(1, 4), featuredNews}));
 })

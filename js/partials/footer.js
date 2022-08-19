@@ -1,21 +1,19 @@
 /**
  * The Footer Partial
  */
-Handlebars.registerPartial('footer',
-    `<section class="container-fluid" id="footer">
+Handlebars.registerPartial('footer', `<section class="container-fluid" id="footer">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2  footer-block" id="footer-nav">
                                 <h2>News Sections</h2>
                                 <nav class="footer-nav">
-                                    <li><a class="active-nav" href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Coder News Partners</a></li>
+                                    <li><a class="active-nav" href="/">Home</a></li>
+                                    <li><a href="/contact.html">Contact Us</a></li>
+                                    <li><a href="/articles.html">News</a></li>
                                 </nav>
                             </div>
                             <div class="col-lg-5 footer-block" id="footer-contact">
-                                <h2>Contect Us</h2>
+                                <h2>Contact Us</h2>
                                 <p>For Developers From Developers For Developers From Developers </p>
                                 <form id="footer-contact-form">
                                     <div class="form-group">
@@ -48,17 +46,13 @@ Handlebars.registerPartial('footer',
 
                         </div>
                     </div>
-                </section>`
-);
+                </section>`);
 
 /**
  Compile the template
  */
-const containerFooter = $('#container-footer'),
-    footerTemplate = $('#footer-template');
-const footerTemplateCompiled = Handlebars.compile(
-    footerTemplate.html()
-);
+const containerFooter = $('#container-footer'), footerTemplate = $('#footer-template');
+const footerTemplateCompiled = Handlebars.compile(footerTemplate.html());
 // OPTIONAL: Define data to pass to the template
 const footerData = {}
 containerFooter.empty().append(footerTemplateCompiled(footerData));

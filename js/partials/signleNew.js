@@ -1,13 +1,10 @@
-/**
- * The Footer Partial
- */
-Handlebars.registerPartial('singleNew',
-    ` <article class="uk-article">
-    <h1 class="uk-article-title green-title">{{ singlNew.title }}</h1>
-    <p class="uk-article-meta">Date Added: {{formatDate singlNew.createdAt }} | Category: <a href="/search.html?tag={{ singlNew.tagsStr }}">{{ singlNew.tagsStr }}</a> </p>
+/* It's a partial template, it's a template that we can use in other templates */
+Handlebars.registerPartial('singleNew', ` <article class="uk-article">
+    <h1 class="uk-article-title green-title">{{ singleNew.title }}</h1>
+    <p class="uk-article-meta">Date Added: {{formatDate singleNew.createdAt }} | Category: <a href="/search.html?tag={{ singleNew.tagsStr }}">{{ singleNew.tagsStr }}</a> </p>
     <p class="uk-article-lead"><img class="img-responsive"
-            src="{{ singlNew.image }}" alt="{{ singlNew.title }}"></p>
-            <p>{{safe singlNew.description }}</p>
+            src="{{ singleNew.image }}" alt="{{ singleNew.title }}"></p>
+            <p>{{safe singleNew.description }}</p>
     <p>Share:
         <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
         <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
@@ -15,14 +12,12 @@ Handlebars.registerPartial('singleNew',
 
 </article>
 <br class="clear">
-<br>`
-);
+<br>`);
 
 /**
  * The Footer Partial
  */
-Handlebars.registerPartial('singleNewComments',
-    `  <h2 class="block-title green-title"><img class="block-icon"
+Handlebars.registerPartial('singleNewComments', `  <h2 class="block-title green-title"><img class="block-icon"
     src="assets/images/ics/comments.png">Comments: </h2>
 <br>
 {{#if hasComment}}
@@ -31,12 +26,9 @@ Handlebars.registerPartial('singleNewComments',
     <div class="comment-item">
     <div class="col-xs-1 comment-avatar"></div>
     <div class="col-xs-10 comment-info">
-        <h3 class="green-title">اسم المعلق هنا في سطر واحد او سطرين</h3>
-        <p class="uk-article-meta">ادخل بتاريخ: 22/5/2015</p>
-        <p>وكان الرئيس الفرنسي فرانسوا هولاند دعا أمس، وبعد اجتماع خلية الأزمة في قصر
-            الإليزيه غداة يوم حداد وطني "كل المواطنين" إلى التظاهر الأحد في مسيرات
-            للتنديد "بالمجزرة" التي حصلت في مقر الصحيفة الفرنسية الساخرة، مشيرا إلى أنها
-            لإثبات "الوحدة الوطنية ضد الإرهاب".</p>
+        <h3 class="green-title">{{ author }}</h3>
+        <p class="uk-article-meta">Date: {{ createdAt }}</p>
+        <p>{{ comment }}</p>
     </div>
     <br class="clear">
     {{/each}}
@@ -47,7 +39,7 @@ Handlebars.registerPartial('singleNewComments',
 </div>
 <br class="clear">
 <h2 class="block-title green-title"><img class="block-icon"
-    src="assets/images/ics/comments.png">Add Your Comment : </h2>
+    src="/assets/images/ics/comments.png">Add Your Comment : </h2>
 <br>
 <br class="clear">
 <form id="article-comment-post">
@@ -64,46 +56,38 @@ Handlebars.registerPartial('singleNewComments',
         placeholder="Message Content"></textarea>
 </div>
 <button type="submit" class="btn btn-lg btn-green">Submit</button>
-</form>`
-);
+</form>`);
 
 
-document.addEventListener('news-data-loaded', ({ detail }) => {
-    const queries = new URLSearchParams(location.search),
-        id = queries.get('id');
+document.addEventListener('news-data-loaded', ({detail}) => {
+    const queries = new URLSearchParams(location.search), id = queries.get('id');
 
-    // let's check if we have an id befor,
+    // let's check if we have an id before,
     // accessing and fetching our data!
     if (!id) {
-        throw new Error('Error fetching new!, Please try again leter, or contact the suppert team')
+        throw new Error('Error fetching new!, Please try again later, or contact the support team')
     }
 
     // let's get going and get our new from
     // our database :)
-    let singlNew = detail.data().find((n) => n.id === id);
+    let singleNew = detail.data().find((n) => n.id === id);
 
-    const containerSingleNew = $('#container-single-new'),
-        singleNewTemplate = $('#single-new-template');
-    const singleNewTemplateCompiled = Handlebars.compile(
-        singleNewTemplate.html()
-    );
-    // OPTIONAL: Define data to pass to the template
-    const singleNewData = { singlNew }
+    const containerSingleNew = $('#container-single-new'), singleNewTemplate = $('#single-new-template');
+    const singleNewTemplateCompiled = Handlebars.compile(singleNewTemplate.html());
+
+    const singleNewData = {singleNew: singleNew}
     containerSingleNew.empty().append(singleNewTemplateCompiled(singleNewData));
 
     // comments section ...
     const containerSingleNewComment = $('#container-single-new-comment'),
         singleNewCommentTemplate = $('#single-new-comment-template');
-    const singleNewCommentTemplateCompiled = Handlebars.compile(
-        singleNewCommentTemplate.html()
-    );
-    let commentsData = { hasComment: singleNewData.comments, singleNewData }
+    const singleNewCommentTemplateCompiled = Handlebars.compile(singleNewCommentTemplate.html());
+    let commentsData = {hasComment: singleNewData.comments, singleNewData}
     containerSingleNewComment.empty().append(singleNewCommentTemplateCompiled(commentsData));
 
 
     const AsideNeededEvent = new CustomEvent('aside-needed', {
-        bubbles: true,
-        detail: {
+        bubbles: true, detail: {
             data: () => detail.data()
         }
     });

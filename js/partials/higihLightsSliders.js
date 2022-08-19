@@ -1,8 +1,8 @@
 /**
  * The HigihLights Partial
+ * registering a partial template with the name `higihLightsSliders`
  */
-Handlebars.registerPartial('higihLightsSliders',
-    `<section class="container-fluid">
+Handlebars.registerPartial('higihLightsSliders', `<section class="container-fluid">
     <div class="container" id="content-container">
         <div class="row" id="high-light-slider">
         {{#each highLights}}
@@ -23,37 +23,31 @@ Handlebars.registerPartial('higihLightsSliders',
             {{/each}}
         </div>
     </div>
-</section>`
-);
+</section>`);
 
 /**
  * let's check if the our client is coming from
  * featuredNews, in case it's we are going to fetch
  * our data news based on the client wishes :) ..
-*/
+ */
 
-document.addEventListener('news-data-loaded', ({ detail }) => {
-    const containerHigihLights = $('#container-higih-lights'),
-        higihLightsTemplate = $('#higih-lights-template');
-    const higihLightsTemplateCompiled = Handlebars.compile(
-        higihLightsTemplate.html()
-    );
+document.addEventListener('news-data-loaded', ({detail}) => {
+    const containerHighLights = $('#container-higih-lights'), highLightsTemplate = $('#higih-lights-template');
+    const highLightsTemplateCompiled = Handlebars.compile(highLightsTemplate.html());
     let highLights = detail.data();
-    if (q === 'featuredNews') {
+    if (getQueryByName('q', '') === 'featuredNews') {
         highLights = highLights
-            .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
+        .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
     }
-    // OPTIONAL: Define data to pass to the template
-    const higihLightsData = {
+
+    const highLightsData = {
         highLights: highLights.slice(0, 3)
     }
-    containerHigihLights.empty().append(higihLightsTemplateCompiled(higihLightsData));
+    containerHighLights.empty().append(highLightsTemplateCompiled(highLightsData));
 
     $(function () {
         $("#high-light-slider").owlCarousel({
-            singleItem: true,
-            lazyLoad: true,
-            autoPlay: true
+            singleItem: true, lazyLoad: true, autoPlay: true
         });
     });
 

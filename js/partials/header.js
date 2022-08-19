@@ -1,8 +1,7 @@
 /**
  * The Header Partial
  */
-Handlebars.registerPartial('header',
-    `<header class="container-fluid" id="main-header">
+Handlebars.registerPartial('header', `<header class="container-fluid" id="main-header">
                 <div id="header-top">
                     <div class="container" id="top-header-cont">
                         <ul id="nav-trigger-name">
@@ -28,26 +27,25 @@ Handlebars.registerPartial('header',
                     </div>
                 </div>
             </header>
-                <br>`
-);
+                <br>`);
 
 /**
  Compile the template
-*/
-const containerHeader = $('#container-header'),
-    headerTemplate = $('#header-template');
-const headerTemplateCompiled = Handlebars.compile(
-    headerTemplate.html()
-);
+ */
+const containerHeader = $('#container-header'), headerTemplate = $('#header-template');
+const headerTemplateCompiled = Handlebars.compile(headerTemplate.html());
 // OPTIONAL: Define data to pass to the template
 const headerData = {
     title: "Coder News ",
     subTitle: "For Developers From Developers",
-    socialLinks: [
-        { icon: 'assets/images/ics/fb.png', name: "Facebook", url: '/' },
-        { icon: 'assets/images/ics/tw.png', name: "Twitter", url: '/' },
-        { icon: 'assets/images/ics/yt.png', name: "Youtube", url: '/' },
-        { icon: 'assets/images/ics/in.png', name: "Instagram", url: '/' },
-    ]
+    socialLinks: [{icon: 'assets/images/ics/fb.png', name: "Facebook", url: '/'}, {
+        icon: 'assets/images/ics/tw.png',
+        name: "Twitter",
+        url: '/'
+    }, {icon: 'assets/images/ics/yt.png', name: "Youtube", url: '/'}, {
+        icon: 'assets/images/ics/in.png',
+        name: "Instagram",
+        url: '/'
+    },]
 }
 containerHeader.empty().append(headerTemplateCompiled(headerData));
