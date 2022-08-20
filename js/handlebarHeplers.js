@@ -4,7 +4,7 @@
  * @returns The string is being returned.
  */
 function slugify(string) {
-    return ![null, undefined, ''].includes(string) ? string.split(' ').join('-') : string;
+    return ![null, undefined, ''].includes(string) ? string.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').split(' ').join('-') : string;
 }
 
 /**
@@ -68,24 +68,24 @@ Handlebars.registerHelper('getQuery', (string, defaultString, options) => {
 
 /* A helper function that is used to check if the url path is the current url path. */
 Handlebars.registerHelper('isCurrent', (urlPath, options) => {
-    if (! urlPath) {
+    if (!urlPath) {
         return false;
     }
     let {
         pathname
     } = new URL(location.href);
 
-    if (! pathname) {
+    if (!pathname) {
         return false;
     }
     pathname = pathname.split('.')[0] ?? undefined;
 
-    if (! Array.isArray(pathname) &&  urlPath === 'index') {
-        return  true
+    if (!Array.isArray(pathname) && urlPath === 'index') {
+        return true
     }
-    if (! pathname) {
-        return  false;
+    if (!pathname) {
+        return false;
     }
     let current = pathname.split('/').filter((s) => ![null, undefined, ''].includes(s))[0] ?? undefined;
-    return  current === urlPath;
+    return current === urlPath;
 });

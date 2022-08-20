@@ -16,10 +16,10 @@ Handlebars.registerPartial('singleNew', ` <article class="uk-article">
 /**
  * The Footer Partial
  */
-Handlebars.registerPartial('singleNewComments', `  
+Handlebars.registerPartial('singleNewComments', `
 <h2 class="block-title green-title mb-20">
     <i class="fa-solid fa-comments"></i>
-    Comments: 
+    Comments:
 </h2>
 {{#if hasComment}}
     {{#each singleNewData.comments}}
@@ -36,13 +36,13 @@ Handlebars.registerPartial('singleNewComments', `
 {{else}}
 <div class="flexable flexable--center mb-20 mt-20">
 <h5>No Comment Yat Be First!</h5>
-</div>   
+</div>
 {{/if }}
 </div>
 
 <h2 class="block-title green-title mb-20">
 <i class="fa-solid fa-comment"></i>
-Add new comment: 
+Add new comment:
 </h2>
 <form id="article-comment-post">
 <div class="form-group">
@@ -61,7 +61,7 @@ Add new comment:
 </form>`);
 
 
-document.addEventListener('news-data-loaded', ({detail}) => {
+document.addEventListener('news-data-loaded', ({ detail }) => {
     const queries = new URLSearchParams(location.search), id = queries.get('id');
 
     // let's check if we have an id before,
@@ -77,14 +77,14 @@ document.addEventListener('news-data-loaded', ({detail}) => {
     const containerSingleNew = $('#container-single-new'), singleNewTemplate = $('#single-new-template');
     const singleNewTemplateCompiled = Handlebars.compile(singleNewTemplate.html());
 
-    const singleNewData = {singleNew: singleNew}
+    const singleNewData = { singleNew: singleNew }
     containerSingleNew.empty().append(singleNewTemplateCompiled(singleNewData));
 
     // comments section ...
     const containerSingleNewComment = $('#container-single-new-comment'),
         singleNewCommentTemplate = $('#single-new-comment-template');
     const singleNewCommentTemplateCompiled = Handlebars.compile(singleNewCommentTemplate.html());
-    let commentsData = {hasComment: singleNewData.comments, singleNewData}
+    let commentsData = { hasComment: singleNewData.comments, singleNewData }
     containerSingleNewComment.empty().append(singleNewCommentTemplateCompiled(commentsData));
 
 
