@@ -1,6 +1,6 @@
 /* It's a partial template, it's a template that we can use in other templates */
 Handlebars.registerPartial('singleNew', ` <article class="uk-article">
-    <h1 class="uk-article-title green-title">{{ singleNew.title }}</h1>
+    <h1 class="uk-article-title green-title mb-20">{{ singleNew.title }}</h1>
     <p class="uk-article-meta">Date Added: {{formatDate singleNew.createdAt }} | Category: <a href="/search.html?tag={{ singleNew.tagsStr }}">{{ singleNew.tagsStr }}</a> </p>
     <p class="uk-article-lead"><img class="img-responsive"
             src="{{ singleNew.image }}" alt="{{ singleNew.title }}"></p>
@@ -9,7 +9,6 @@ Handlebars.registerPartial('singleNew', ` <article class="uk-article">
         <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
         <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
     </p>
-
 </article>
 <br class="clear">
 <br>`);
@@ -17,9 +16,11 @@ Handlebars.registerPartial('singleNew', ` <article class="uk-article">
 /**
  * The Footer Partial
  */
-Handlebars.registerPartial('singleNewComments', `  <h2 class="block-title green-title"><img class="block-icon"
-    src="assets/images/ics/comments.png">Comments: </h2>
-<br>
+Handlebars.registerPartial('singleNewComments', `  
+<h2 class="block-title green-title mb-20">
+    <i class="fa-solid fa-comments"></i>
+    Comments: 
+</h2>
 {{#if hasComment}}
     {{#each singleNewData.comments}}
     <br class="clear">
@@ -33,15 +34,16 @@ Handlebars.registerPartial('singleNewComments', `  <h2 class="block-title green-
     <br class="clear">
     {{/each}}
 {{else}}
-    <h1>No Comment Yat Be First!</h1>
+<div class="flexable flexable--center mb-20 mt-20">
+<h5>No Comment Yat Be First!</h5>
+</div>   
 {{/if }}
-
 </div>
-<br class="clear">
-<h2 class="block-title green-title"><img class="block-icon"
-    src="/assets/images/ics/comments.png">Add Your Comment : </h2>
-<br>
-<br class="clear">
+
+<h2 class="block-title green-title mb-20">
+<i class="fa-solid fa-comment"></i>
+Add new comment: 
+</h2>
 <form id="article-comment-post">
 <div class="form-group">
     <input type="email" class="form-control" id="footer-contact-name"

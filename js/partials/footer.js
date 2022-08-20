@@ -4,7 +4,7 @@
 Handlebars.registerPartial('footer', `<section class="container-fluid" id="footer">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-2  footer-block" id="footer-nav">
+                            <div class="col-md-4 col-sm-12 footer-block" id="footer-nav">
                                 <h2>News Sections</h2>
                                 <nav class="footer-nav">
                                     <li><a class="active-nav" href="/">Home</a></li>
@@ -12,7 +12,7 @@ Handlebars.registerPartial('footer', `<section class="container-fluid" id="foote
                                     <li><a href="/articles.html">News</a></li>
                                 </nav>
                             </div>
-                            <div class="col-lg-5 footer-block" id="footer-contact">
+                            <div class="col-md-4 col-sm-12 footer-block" id="footer-contact">
                                 <h2>Contact Us</h2>
                                 <p>For Developers From Developers For Developers From Developers </p>
                                 <form id="footer-contact-form">
@@ -34,7 +34,7 @@ Handlebars.registerPartial('footer', `<section class="container-fluid" id="foote
                                 </form>
                             </div>
 
-                            <div class="col-lg-4  footer-block" id="footer-info">
+                            <div class="col-md-4 col-sm-12 footer-block" id="footer-info">
                                     <h1>Coder News </h1>
                                     <hr class="uk-article-divider">
                                     © 2012 - 2022 Coder News

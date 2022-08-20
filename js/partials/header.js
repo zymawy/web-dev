@@ -26,8 +26,7 @@ Handlebars.registerPartial('header', `<header class="container-fluid" id="main-h
                         </ul>
                     </div>
                 </div>
-            </header>
-                <br>`);
+            </header>`);
 
 /**
  Compile the template

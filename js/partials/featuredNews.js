@@ -2,38 +2,44 @@
  * The Featured News  Partial
  */
 Handlebars.registerPartial('featuredNews', `<section class="container" id="latest-news">
-                    <div class="col-lg-12 no-pm with-hor-line" id="news-block-title">
-                        <h1 class="red-title block-title f-left no-m">
-                            <img class="block-icon" src="/assets/images/ics/news.png" alt="News">Featured News</h1>
-                        <a href="/articles.html?q=featuredNews" class="btn btn-lg btn-red f-right"
-                           style="margin-top: 10px; margin-left: -30px;">Archive</a>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="home-block__title" id="news-block-title">
+                                <h1 class="red-title block-title no-m">
+                                    <i class="fa-solid fa-newspaper"></i>
+                                    Featured News
+                                </h1>
+                                <a href="/articles.html?q=featuredNews" class="btn btn-lg btn-red">Archive</a>
+                            </div>
+                        </div>
                     </div>
-                    <br class="clear">
-                    <br>
+                    <div class="row">
                     <div class="col-md-6">
                         <div id="lt-news">
                         {{#each slidersNews }}
                             <div class="lt-news-item">
                                 <a href="{{buildUrl this 'news'}}" class="big-news-image"><img class="img-responsive" src="{{ image }}" alt="{{ title }}"></a>
-                                <a href="{{buildUrl this 'news'}}"><h1 class="red-title">{{ title }}</h1></a>
+                                <a href="{{buildUrl this 'news'}}"><h1 class="red-title title-trimmed">{{ title }}</h1></a>
                                 <span>Added At: {{ formatDate createdAt }} | Category: <a href="{{ buildUrl this 'search' }}" class="red-title">{{ tagsStr }}</a> </span>
                                 <p></p>
                             </div>
                         {{/each }}
                         </div>
                     </div>
-                        <div class="col-md-6 no-pm">
-                        {{#each latestNews}}
+                        <div class="col-md-6">
+                            <div class="row">
+                            {{#each latestNews}}
                             <div class="col-xs-6 more-news-block" >
                                 <a href="{{ buildUrl this 'news' }}" class="more-news-img"><img src="{{ image }}" alt="{{ title }}"></a>
-                                <a href="{{ buildUrl this 'news' }}"><h3 class="red-title">{{ title }}</h3></a>
+                                <a href="{{ buildUrl this 'news' }}"><h3 class="red-title title-trimmed">{{ title }}</h3></a>
                                 <p>Added At: {{formatDate createdAt }} | Category: <a href="/article.html?id={{ id }}" class="red-title">{{ tagsStr }}</a> </p>
                             </div>
                         {{/each }}
+                            </div>
                         </div>
-                </section>
-                <br class="clear">
-                <br>`);
+                    </div>
+                    
+                </section>`);
 
 
 document.addEventListener('news-data-loaded', ({detail}) => {

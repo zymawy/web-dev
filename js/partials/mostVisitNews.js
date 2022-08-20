@@ -1,26 +1,24 @@
 /* Registering a partial template with the name `mostVisitNews` */
-Handlebars.registerPartial('mostVisitNews', ` <div class="container" id="news-projects-inner">
-                        <div class="row">
-                            <br>
-                        <div class="col-lg-12 no-pm with-hor-line" >
-                            <h1 class="red-title block-title no-pm f-left" style="background-color: #fefefe;"><img
-                                    class="block-icon" src="/assets/images/ics/projects.png" alt="News">For Developers</h1>
-                        </div>
-                            <br>
-                            <br class="clear">
-                            <br><br>
-                             <div class="col-md-12 slide-holder" id="projects-items">
-                             {{#each news}}
-                                 <div class="slide-item">
-                                    <a href="{{buildUrl this 'news'}}"><img src="{{ image }}" alt="{{ title }}"></a>
-                                    <a href="{{buildUrl this 'news'}}"><h4 class="red-title">{{ title }}</h4></a>
-                                </div>
-                             {{/each}}
-
-                             </div>
-                        </div>
-                    </div>
-                    <br>`);
+Handlebars.registerPartial('mostVisitNews', ` 
+<div class="home-block">
+    <div class="container" id="news-projects-inner">
+        <div class="home-block__title " id="news-block-title">
+            <h1 class="red-title block-title no-m bg-white">
+                <i class="fa-solid fa-code"></i>
+                For Developers
+            </h1>       
+        </div>                        
+        <div class="col-md-12 slide-holder" id="projects-items">
+        {{#each news}}
+            <div class="slide-item">
+                <a href="{{buildUrl this 'news'}}"><img src="{{ image }}" alt="{{ title }}"></a>
+                <a href="{{buildUrl this 'news'}}"><h4 class="red-title title-trimmed">{{ title }}</h4></a>
+            </div>
+        {{/each}}
+    </div>
+    </div>
+</div>
+`);
 
 document.addEventListener('news-data-loaded', ({detail}) => {
     /**

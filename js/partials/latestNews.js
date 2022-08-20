@@ -9,40 +9,33 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                             </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="{{buildUrl this 'news'}}" class="d-block mb-30">
+                                <a href="{{buildUrl this 'news'}}" class="d-block mb-15">
                                     <img src="{{ featuredNews.image }}" class="img-responsive" alt="{{ featuredNews.title }}">
                                 </a>
                                 <h3 class="red-title">
                                     <a href="{{buildUrl this 'news'}}">{{ featuredNews.title }}</a>
                                 </h3>
-                                <p>{{ featuredNews.description }}</p>
-                                <br>
                             </div>
                             <div class="col-md-6">
                              {{#each news}}
-                                <div class="col-md-12 no-pm mb-30">
-                                    <h3 class="red-title">
-                                        <a href="{{buildUrl this 'news'}}">{{this.title}}</a>
-                                    </h3>
+                                <div class="col-md-12 no-pm mb-15">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <a href="{{buildUrl this 'news'}}">
-                                                <img class="wide" src="{{this.image}}" alt="{{this.title}}">
+                                            <a href="{{buildUrl this 'news'}}" title="{{this.title}}">
+                                                <img class="wide" src="{{this.image}}" alt="news thumb">
                                             </a>
                                         </div>
                                         <div class="col-xs-8 no-pm">
-                                            <p  style="display: block; margin:0 !important;">
-                                                {{this.description}}
-                                            </p>
+                                            <h4 class="red-title">
+                                                <a href="{{buildUrl this 'news'}}">{{this.title}}</a>
+                                            </h4>
                                         </div>
                                     </div>
                                 </div>
                             {{/each}}
                         </div>
                         </div>
-                </section>
-                <br class="clear">
-                <br>`);
+                </section>`);
 
 document.addEventListener('news-data-loaded', ({detail}) => {
     /**

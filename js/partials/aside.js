@@ -3,17 +3,19 @@
  */
 Handlebars.registerPartial('singleNewASide', ` <aside class="no-pm" id="sidebar">
 <div class="sidebar-block">
-    <h2 class="green-title block-title"><img class="block-icon"
-            src="/assets/images/ics/news.png" alt="News">Smilier News</h2>
-    <br>
+    <h2 class="red-title block-title mb-20">
+    <i class="fa-solid fa-newspaper"></i>
+        Smilier News
+    </h2
+    
     {{#each smilierNews}}
-    <div class="news-latest">
+    <div>
     <a href="{{buildUrl this 'news'}}" class="big-news-image"><img class="img-responsive"
             src="{{ image }}" alt="{{ title }}"></a>
     <a href="{{buildUrl this 'news'}}">
-        <h2 class="green-title">{{ title }}</h2>
+        <h4 class="red-title">{{ title }}</h4>
     </a>
-    <span>Added Date: {{ formatDate createdAt }} | Category: <a href="{{buildUrl this 'search'}}" class="green-title">{{ tagsStr }}</a></span>
+    <small>Added Date: {{ formatDate createdAt }} | Category: <a href="{{buildUrl this 'search'}}" class="green-title">{{ tagsStr }}</a></small>
     <p>{{safe singlNew.description }}</p>
 </div>
     {{/each}}

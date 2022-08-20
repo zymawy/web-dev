@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
     <link href="styles/bootstrap.min.css" rel="stylesheet"/>
     <link href="styles/owl.carousel.css" rel="stylesheet" type="text/css"/>
     <link href="styles/owl.theme.css" rel="stylesheet" type="text/css"/>
@@ -55,21 +56,18 @@
                 </div>
                 <div class="container" id="content-container">
                     <div class="row">
-                        <!-- A Single New Partial Could Be Found In   (js/partials/singleNewASide.js) -->
-                        <div class="col-md-4" id="container-single-new-aside">
-                            <div class="flexable">
-                                <div class="lds-dual-ring"></div>
-                            </div>
-                            <script id="single-new-aside-template" type="text/x-handlebars-template">
-                                {{>singleNewASide }}
-                            </script>
-                        </div>
-                        <div class="col-md-8" id="content-bar">
+                        <div class="col-md-12">
                             <ul class="uk-breadcrumb">
-                                <li><a href="#">الرئيسية</a></li>
-                                <li><a href="#">مركز الأخبار</a></li>
-                                <li><span class="uk-active">أخبار محلية</span></li>
+                                <li><a href="#"><i class="fa-solid fa-house-chimney"></i></a></li>
+                                <li><a href="#">News</a></li>
+                                <li class="uk-active"><span>Current news title</span></li>
                             </ul>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <!-- A Single New Partial Could Be Found In   (js/partials/singleNewASide.js) -->
+                        <div class="col-md-8" id="content-bar">    
                             <!-- A Single New Partial Could Be Found In   (js/partials/singleNew.js) -->
                             <div id="container-single-new">
                                 <div class="flexable">
@@ -77,9 +75,8 @@
                                 </div>
                                 <script id="single-new-template" type="text/x-handlebars-template">
                                     {{>singleNew }}
-                                    </script>
+                                </script>
                             </div>
-
                             <!-- A Single New Comment Partial Could Be Found In   (js/partials/singleNew.js) -->
                             <div id="container-single-new-comment">
                                 <div class="flexable">
@@ -87,9 +84,16 @@
                                 </div>
                                 <script id="single-new-comment-template" type="text/x-handlebars-template">
                                     {{>singleNewComments }}
-                                    </script>
+                                </script>
                             </div>
-
+                        </div>
+                        <div class="col-md-4" id="container-single-new-aside">
+                            <div class="flexable">
+                                <div class="lds-dual-ring"></div>
+                            </div>
+                            <script id="single-new-aside-template" type="text/x-handlebars-template">
+                                {{>singleNewASide }}
+                            </script>
                         </div>
                     </div>
                 </div>

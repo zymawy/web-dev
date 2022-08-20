@@ -1,3 +1,4 @@
+@import url("overrides.css");
 /* CSS Document */
 /* The code is making the image responsive. */
 .img-responsive{
@@ -5,9 +6,13 @@
 	height: auto;
 }
 
+.bg-white {
+	background: white !important;
+}
+
 /* Setting the margin to 0 for all h1, h2, h3, h4, and h5 tags. */
-h1, h2, h3, h4, h5 {
-	margin: 0;
+#container-header {
+	margin-bottom: 20px;
 }
 
 /* The code is changing the color of the pagination links to red. */
@@ -43,14 +48,54 @@ h1, h2, h3, h4, h5 {
 	color: #f4f4f4;
 }
 
-
-
 /* The code is changing the background color of the button when the mouse hovers over it. */
 .btn-green:hover{
 	background: #064d26 !important;
 	color: #f4f4f4 !important;
-
 }
+
+.home-block {
+	margin: 0 0 50px 0;
+}
+
+.home-block__title {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+/* breadcrumb */
+.uk-breadcrumb {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0;
+	list-style: none;
+	margin: 0 0 20px 0;
+}
+
+.uk-breadcrumb li {
+	position: relative;
+}
+
+.uk-breadcrumb li.uk-active {
+	color: #999;
+}
+
+.uk-breadcrumb li:after {
+	content: '/';
+	display: inline-block;
+	margin: 0 10px;
+	color: #bbb;
+}
+
+.uk-breadcrumb li:last-child::after {
+	display: none;
+}
+
+
 
 /* Setting the transition for all elements to 0.3 seconds. */
 * a, * img, button{
@@ -114,6 +159,18 @@ h1, h2, h3, h4, h5 {
 	margin-bottom: 30px !important;
 }
 
+.mb-20 {
+	margin-bottom: 20px !important;
+}
+
+.mt-20 {
+	margin-top: 20px !important;
+}
+
+.mb-15 {
+	margin-bottom: 15px !important;
+}
+
 /* The code is setting the margin and padding to 0 for the container-fluid class. */
 .container-fluid{
 	margin: 0 !important;
@@ -145,6 +202,21 @@ a:hover img{
 	direction: ltr;
 }
 
+.lt-news-item {
+	display: flex;
+	flex-direction: column;
+	min-height: 380px;
+}
+
+.lt-news-item > a {
+	flex: 1;
+}
+
+.lt-news-item img {
+	height: 370px;
+	object-fit: cover;
+}
+
 
 /* Changing the opacity of the image when the mouse hovers over it. */
 section#latest-news a:hover img{
@@ -166,8 +238,14 @@ section#latest-news a:hover img{
 	color: #a13436 !important;
 	text-decoration: none;
 	z-index: 1000;
-	line-height: 1.6em;
+	line-height: 1.4em;
 	margin-bottom: 4px;
+}
+
+.title-trimmed {
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* The code is changing the color of the title to white. */
@@ -474,8 +552,6 @@ the margin-top to 10px. */
 	#news-block-title h1{
 		font-size: 20px;
 	}
-
-
 }
 
 /* A media query. It is saying that if the screen is 700px or less, then the font size of the news-head-name id will be
@@ -483,6 +559,12 @@ the margin-top to 10px. */
 @media all and (max-width: 700px) {
 	#news-head-name{
 		font-size: 2em;
+	}
+	#news-trophies .flexable {
+		flex-direction: column;
+	}
+	#news-trophies .flexable h4 {
+		margin-bottom: 20px;
 	}
 }
 
@@ -565,23 +647,22 @@ a.btn-more{
 #news-trophies{
 	position: relative;
 	background: #7a7a7a;
-	padding: 15px 0 !important;
+	padding: 30px 0 !important;
 }
 
 #news-trophies h2{
-	margin-top: 30px;
+	
 	margin-bottom:5px;
 	color: #f6f6f6;
 }
 
 #news-trophies h4{
 	color:#f8f8f8;
-	margin-top: 10px !important;
 }
 
-.trophy-item{
-	margin-top: 10px;
-	margin-bottom: 10px;
+
+
+.trophy-item{	
 	text-align: center;
 }
 
@@ -618,8 +699,12 @@ a#know-us-more:hover{
 	color: #094022;
 }
 
+.more-news-block {
+	margin: 0 0 15px 0;
+}
+
 .more-news-block p{
-	margin-top: 3px;
+	margin: 3px 0 0 0;
 	font-size: 11px;
 	color: #717171;
 }
@@ -629,10 +714,20 @@ a#know-us-more:hover{
 	margin-bottom: 5px;
 }
 
+.more-news-img {
+	max-height: 200px;
+	overflow: hidden;
+}
+
+.more-news-img img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+}
+
 #news-projects{
 	background: #fefefe;
 	padding-top: 30px !important;
-	padding-bottom: 30px !important;
 }
 
 .slide-holder{
@@ -862,6 +957,20 @@ h3, .h3 {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+}
+
+.flexable--row {
+	flex-direction: row;
+}
+
+.flexable--center {
+	align-items: center;
+	justify-content: center;
+}
+
+
+.no-p {
+	padding: 0 !important;
 }
 
 /*this code has been taken from  https://loading.io/css/*/

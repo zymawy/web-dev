@@ -71,6 +71,20 @@
 	border-radius: 30px;
 }
 
+.owl-item {
+	padding: 0 10px;
+}
+
+.owl-item img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.slide-item.contain img {
+	height: auto;
+object-fit: contain;
+}
 /* preloading images */
 .owl-item.loading{
 	min-height: 150px;
