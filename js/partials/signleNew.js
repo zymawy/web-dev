@@ -4,7 +4,12 @@ Handlebars.registerPartial('singleNew', ` <article class="uk-article">
     <p class="uk-article-meta">Date Added: {{formatDate singleNew.createdAt }} | Category: <a href="/search.html?tag={{ singleNew.tagsStr }}">{{ singleNew.tagsStr }}</a> </p>
     <p class="uk-article-lead"><img class="img-responsive"
             src="{{ singleNew.image }}" alt="{{ singleNew.title }}"></p>
-            <p>{{safe singleNew.description }}</p>
+            <p>{{safe singleNew.description }} How scientists caught footage of 'the kraken' after centuries of searching
+            How scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searching
+
+            How scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searching
+            How scientists caught footage of 'the kraken' after centuries of searching
+            </p>
     <p>Share:
         <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
         <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
