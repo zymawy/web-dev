@@ -20,7 +20,8 @@ function getQueryByName(name, defaultString) {
 }
 /* A helper function that is used to prevent the html from being escaped. */
 Handlebars.registerHelper('safe', function (text) {
-    return new Handlebars.SafeString(String(text));
+    let result = String(new Handlebars.SafeString(text));
+    return ![null, 'null', undefined, '', 'undefined'].includes(result) ? result : '';
 });
 
 /* A helper function that takes a string and replaces all spaces with dashes. */
@@ -43,7 +44,7 @@ Handlebars.registerHelper('formatDate', (data) => {
 
 /* A helper function that is used to build the url for the article.html and search.html pages. */
 Handlebars.registerHelper('buildUrl', (n, source, options) => {
-
+    console.log(n, source);
     // let's test our source, so we can dynamically
     // generate url upon source, and for reuse-ability ..
     switch (source) {
@@ -88,4 +89,12 @@ Handlebars.registerHelper('isCurrent', (urlPath, options) => {
     }
     let current = pathname.split('/').filter((s) => ![null, undefined, ''].includes(s))[0] ?? undefined;
     return current === urlPath;
+});
+
+
+
+/* A helper function that gets the query string from the url. */
+Handlebars.registerHelper('getCurrentBreadcrumb', (breadcrumb, defaultBreadcrumb, options) => {
+
+    return breadcrumb || defaultBreadcrumb;
 });

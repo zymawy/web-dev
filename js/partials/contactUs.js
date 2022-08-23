@@ -27,18 +27,24 @@ Handlebars.registerPartial('contectUs',
  */
 const containerContact = $('#container-contact'), contactTemplate = $('#contact-template');
 const contactTemplateCompiled = Handlebars.compile(contactTemplate.html());
-/**
- * Loading Our Dummy Data and pass it to our partials
- * to render the data accordingly
- */
-/**
- * let's filter the data and get the latest news
- * sorted by created at ...
- */
 
 containerContact.empty().append(contactTemplateCompiled({}));
 
+// let's notify our breadcrumb for current url
+const currentBreadcrumb = new CustomEvent('currentBreadcrumb', {
+    bubbles: true, detail: {
+        currentBreadcrumb: 'Contact Us',
+        parent: null
+    }
+});
+console.log(currentBreadcrumb);
+// let's dispatch it !
+document.dispatchEvent(currentBreadcrumb)
+
+
 let contactForm = document.getElementById('contactUs');
+
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     // let's get going and get the form from the
@@ -56,4 +62,4 @@ contactForm.addEventListener('submit', (e) => {
 
     location.href = '/';
 
-})
+});

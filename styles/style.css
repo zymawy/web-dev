@@ -1,4 +1,5 @@
 @import url("overrides.css");
+
 /* CSS Document */
 /* The code is making the image responsive. */
 .img-responsive {
@@ -77,7 +78,7 @@
 }
 
 /* breadcrumb */
-.uk-breadcrumb {
+.breadcrumb {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -86,28 +87,30 @@
 	margin: 0 0 20px 0;
 }
 
-.uk-breadcrumb li {
+.breadcrumb li {
 	position: relative;
 }
 
-.uk-breadcrumb li.uk-active {
+.breadcrumb li.uk-active {
 	color: #999;
 }
 
-.uk-breadcrumb li:after {
-	content: '/';
+.breadcrumb li:after {
+	/* content: '/'; */
 	display: inline-block;
 	margin: 0 10px;
 	color: #bbb;
 }
 
-.uk-breadcrumb li:last-child::after {
+.breadcrumb li:last-child::after {
 	display: none;
 }
 
 
 /* Setting the transition for all elements to 0.3 seconds. */
-* a, * img, button {
+* a,
+* img,
+button {
 	-moz-transition: all 0.3s linear;
 	-webkit-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
@@ -118,7 +121,10 @@
 }
 
 /* Making the text color change to red when you hover over it. */
-* a:hover, * a:hover h1, * a:hover h2, * a:hover h3 {
+* a:hover,
+* a:hover h1,
+* a:hover h2,
+* a:hover h3 {
 	-moz-transition: all 0.3s linear;
 	-webkit-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
@@ -217,7 +223,7 @@ a:hover img {
 	min-height: 380px;
 }
 
-.lt-news-item > a {
+.lt-news-item>a {
 	flex: 1;
 }
 
@@ -250,7 +256,9 @@ section#latest-news a:hover img {
 }
 
 /* Setting the color of the title to red. */
-.red-title, .red-title a, .white-title {
+.red-title,
+.red-title a,
+.white-title {
 	color: #a13436 !important;
 	text-decoration: none;
 	z-index: 1000;
@@ -289,7 +297,10 @@ a:focus {
 }
 
 /* Setting the font family for the h1, h2, h3, and h4 tags. */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
 	font-family: 'Roboto', sans-serif;
 	color: #696969;
 }
@@ -590,6 +601,7 @@ the margin-top to 10px. */
 	#news-trophies .flexable h4 {
 		margin-bottom: 20px;
 	}
+
 	.mb-sm-20 {
 		margin-bottom: 20px !important;
 	}
@@ -734,7 +746,8 @@ a#know-us-more:hover {
 	color: #717171;
 }
 
-.more-news-img, .big-news-image {
+.more-news-img,
+.big-news-image {
 	display: block;
 	margin-bottom: 5px;
 }
@@ -966,7 +979,8 @@ a.photo-gal-item:hover img {
 	direction: rtl;
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: 20px;
 }
 
@@ -1021,14 +1035,8 @@ h3, .h3 {
 	0% {
 		transform: rotate(0deg);
 	}
+
 	100% {
 		transform: rotate(360deg);
 	}
 }
-
-
-
-
-
-
-

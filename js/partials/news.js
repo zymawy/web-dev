@@ -25,7 +25,7 @@ Handlebars.registerPartial('news', ` <div class="container">
  * our data news based on the client wishes :) ..
  */
 
-document.addEventListener('news-data-loaded', ({detail}) => {
+document.addEventListener('news-data-loaded', ({ detail }) => {
     const containerNews = $('#container-news'), NewsTemplate = $('#news-template');
     const NewsTemplateCompiled = Handlebars.compile(NewsTemplate.html());
     let highLights = detail.data();
@@ -34,6 +34,18 @@ document.addEventListener('news-data-loaded', ({detail}) => {
         news: highLights.slice(0, 20)
     }
     containerNews.empty().append(NewsTemplateCompiled(newsData));
+
+
+    // let's notify our breadcrumb for current url
+    const currentBreadcrumb = new CustomEvent('currentBreadcrumb', {
+        bubbles: true, detail: {
+            currentBreadcrumb: '',
+            parent: ''
+        }
+    });
+
+    // let's dispatch it !
+    document.dispatchEvent(currentBreadcrumb)
 
 });
 

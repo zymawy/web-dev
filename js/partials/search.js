@@ -23,7 +23,7 @@ Handlebars.registerPartial('search', ` <div class="col-md-8" id="content-bar">
     {{/each }}
 </div>`);
 
-document.addEventListener('news-data-loaded', ({detail}) => {
+document.addEventListener('news-data-loaded', ({ detail }) => {
     const queries = new URLSearchParams(location.search), search = queries.get('search');
 
     // let's check if we have an id befor,
@@ -44,7 +44,7 @@ document.addEventListener('news-data-loaded', ({detail}) => {
     const searchTemplateCompiled = Handlebars.compile(searchNewTemplate.html());
 
     console.log(searchResults);
-    containerSearch.empty().append(searchTemplateCompiled({...{searchResults}, ...{took: Math.random()}}));
+    containerSearch.empty().append(searchTemplateCompiled({ ...{ searchResults }, ...{ took: Math.random() } }));
 
     const AsideNeededEvent = new CustomEvent('aside-needed', {
         bubbles: true, detail: {
@@ -53,4 +53,16 @@ document.addEventListener('news-data-loaded', ({detail}) => {
     });
     // let's dispatch it !
     document.dispatchEvent(AsideNeededEvent)
+
+
+    // let's notify our breadcrumb for current url
+    const currentBreadcrumb = new CustomEvent('currentBreadcrumb', {
+        bubbles: true, detail: {
+            currentBreadcrumb: `Search for ${search}`,
+            parent: 'articles'// the apper level of the breadcreumb
+        }
+    });
+    console.log(currentBreadcrumb);
+    // let's dispatch it !
+    document.dispatchEvent(currentBreadcrumb)
 })

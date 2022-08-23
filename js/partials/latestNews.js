@@ -9,11 +9,11 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                             </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="{{buildUrl this 'news'}}" class="d-block mb-15">
+                                <a href="{{buildUrl featuredNews 'news'}}" class="d-block mb-15">
                                     <img src="{{ featuredNews.image }}" class="img-responsive" alt="{{ featuredNews.title }}">
                                 </a>
                                 <h3 class="red-title">
-                                    <a href="{{buildUrl this 'news'}}">{{ featuredNews.title }}</a>
+                                    <a href="{{buildUrl featuredNews 'news'}}">{{ featuredNews.title }}</a>
                                 </h3>
                             </div>
                             <div class="col-md-6">
@@ -37,7 +37,7 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                         </div>
                 </section>`);
 
-document.addEventListener('news-data-loaded', ({detail}) => {
+document.addEventListener('news-data-loaded', ({ detail }) => {
     /**
      Compile the template
      */
@@ -52,8 +52,8 @@ document.addEventListener('news-data-loaded', ({detail}) => {
      * sorted by created at ...
      */
     let news = detail.data()
-    .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
-    .slice(0, 4), featuredNews = news[0];
+        .sort((a, b) => (a.createdAt - b.createdAt) ? 1 : -1)
+        .slice(0, 4), featuredNews = news[0];
 
-    containerLatestNews.empty().append(latestNewsTemplateCompiled({news: news.slice(1, 4), featuredNews}));
+    containerLatestNews.empty().append(latestNewsTemplateCompiled({ news: news.slice(1, 4), featuredNews }));
 })

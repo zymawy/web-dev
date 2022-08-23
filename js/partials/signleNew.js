@@ -1,14 +1,10 @@
 /* It's a partial template, it's a template that we can use in other templates */
 Handlebars.registerPartial('singleNew', ` <article class="uk-article">
     <h1 class="uk-article-title green-title mb-20">{{ singleNew.title }}</h1>
-    <p class="uk-article-meta">Date Added: {{formatDate singleNew.createdAt }} | Category: <a href="/search.html?tag={{ singleNew.tagsStr }}">{{ singleNew.tagsStr }}</a> </p>
+    <p class="uk-article-meta">Date Added: {{formatDate singleNew.createdAt }} | Category: <a href="/search.html?search={{ singleNew.tagsStr }}">{{ singleNew.tagsStr }}</a> </p>
     <p class="uk-article-lead"><img class="img-responsive"
             src="{{ singleNew.image }}" alt="{{ singleNew.title }}"></p>
-            <p>{{safe singleNew.description }} How scientists caught footage of 'the kraken' after centuries of searching
-            How scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searching
-            How scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searching
-            How scientists caught footage of 'the kraken' after centuries of searching
-            </p>
+            <p>{{safe singleNew.description }} </p>
     <hr />
     <p>Share:
         <a class="btn btn-social"><i class="fa-brands fa-facebook"></i></a>
@@ -98,4 +94,16 @@ document.addEventListener('news-data-loaded', ({ detail }) => {
     });
     // let's dispatch it !
     document.dispatchEvent(AsideNeededEvent)
+
+    console.log(singleNew);
+    // let's notify our breadcrumb for current url
+    const currentBreadcrumb = new CustomEvent('currentBreadcrumb', {
+        bubbles: true, detail: {
+            currentBreadcrumb: singleNew.title,
+            parent: 'articles'// the apper level of the breadcreumb
+        }
+    });
+    console.log(currentBreadcrumb);
+    // let's dispatch it !
+    document.dispatchEvent(currentBreadcrumb)
 })
