@@ -21,7 +21,7 @@ Handlebars.registerPartial('latestNews', `<section class="container" id="welcome
                                 <div class="col-md-12 no-pm mb-15">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <a href="{{buildUrl this 'news'}}" title="{{this.title}}">
+                                            <a href="{{buildUrl this 'news'}}" class="lt-news-item--sm" title="{{this.title}}">
                                                 <img class="wide" src="{{this.image}}" alt="news thumb">
                                             </a>
                                         </div>

@@ -6,29 +6,27 @@ Handlebars.registerPartial('singleNew', ` <article class="uk-article">
             src="{{ singleNew.image }}" alt="{{ singleNew.title }}"></p>
             <p>{{safe singleNew.description }} How scientists caught footage of 'the kraken' after centuries of searching
             How scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searching
-
             How scientists caught footage of 'the kraken' after centuries of searchingHow scientists caught footage of 'the kraken' after centuries of searching
             How scientists caught footage of 'the kraken' after centuries of searching
             </p>
+    <hr />
     <p>Share:
-        <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
-        <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+        <a class="btn btn-social"><i class="fa-brands fa-facebook"></i></a>
+        <a class="btn btn-social"><i class="fa-brands fa-twitter"></i></a>
+        <a class="btn btn-social"><i class="fa-brands fa-instagram"></i></a>
     </p>
-</article>
-<br class="clear">
-<br>`);
+</article>`);
 
 /**
  * The Footer Partial
  */
 Handlebars.registerPartial('singleNewComments', `
-<h2 class="block-title green-title mb-20">
-    <i class="fa-solid fa-comments"></i>
-    Comments:
-</h2>
+
 {{#if hasComment}}
+<h3 class="block-title green-title mb-20">
+    <i class="fa-solid fa-comments"></i> Comments:
+</h3>
     {{#each singleNewData.comments}}
-    <br class="clear">
     <div class="comment-item">
     <div class="col-xs-1 comment-avatar"></div>
     <div class="col-xs-10 comment-info">
@@ -39,16 +37,16 @@ Handlebars.registerPartial('singleNewComments', `
     <br class="clear">
     {{/each}}
 {{else}}
-<div class="flexable flexable--center mb-20 mt-20">
-<h5>No Comment Yat Be First!</h5>
+<div class="flexable flexable--center bg-gray padded-20 mb-20 mt-20">
+	<h5>No Comments Yet... Be The First commenter!</h5>
 </div>
 {{/if }}
 </div>
 
-<h2 class="block-title green-title mb-20">
+<h3 class="block-title green-title mb-20">
 <i class="fa-solid fa-comment"></i>
 Add new comment:
-</h2>
+</h3>
 <form id="article-comment-post">
 <div class="form-group">
     <input type="email" class="form-control" id="footer-contact-name"
@@ -62,7 +60,7 @@ Add new comment:
     <textarea class="form-control" id="footer-contact-message" rows="5"
         placeholder="Message Content"></textarea>
 </div>
-<button type="submit" class="btn btn-lg btn-green">Submit</button>
+<button type="submit" class="btn btn-lg btn-red wide">Submit</button>
 </form>`);
 
 

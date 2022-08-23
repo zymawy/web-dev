@@ -10,26 +10,26 @@ Handlebars.registerPartial('partners', `
         </h1>
     </div>
         <div class="col-md-12 slide-holder" id="partners-items">
-            <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/1-laravel.svg" alt="Project Thmb"></a>
+            <div class="slide-item partner-entry contain">
+                <a href="#"><img src="/assets/images/temp/partners/01.png" alt="Project Thmb"></a>
             </div>
-            <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/02.jpg" alt="Project Thmb"></a>
+            <div class="slide-item partner-entry contain">
+                <a href="#"><img src="/assets/images/temp/partners/02.png" alt="Project Thmb"></a>
             </div>
-            <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/03.jpg" alt="Project Thmb"></a>
+            <div class="slide-item partner-entry contain">
+                <a href="#"><img src="/assets/images/temp/partners/03.png" alt="Project Thmb"></a>
             </div>
-            <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/04.jpg" alt="Project Thmb"></a>
+            <div class="slide-item partner-entry contain">
+                <a href="#"><img src="/assets/images/temp/partners/04.png" alt="Project Thmb"></a>
             </div>
-            <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/01.jpg" alt="Project Thmb"></a>
+            <div class="slide-item partner-entry contain">
+                <a href="#"><img src="/assets/images/temp/partners/01.png" alt="Project Thmb"></a>
             </div>
-            <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/04.jpg" alt="Project Thmb"></a>
+            <div class="slide-item partner-entry contain">
+                <a href="#"><img src="/assets/images/temp/partners/04.png" alt="Project Thmb"></a>
             </div>
-            <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/02.jpg" alt="Project Thmb"></a>
+            <div class="slide-item partner-entry contain">
+                <a href="#"><img src="/assets/images/temp/partners/02.png" alt="Project Thmb"></a>
             </div>
         </div>
     </div>

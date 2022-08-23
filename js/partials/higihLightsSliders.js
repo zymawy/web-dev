@@ -3,23 +3,23 @@
  * registering a partial template with the name `higihLightsSliders`
  */
 Handlebars.registerPartial('higihLightsSliders', `<section class="container-fluid">
-    <div class="container" id="content-container">
-        <div class="row" id="high-light-slider">
-        {{#each highLights}}
-            <div class="project-item">
-                <div class="col-sm-6">
-                    <a href="{{ buildUrl this 'news' }}">
-                        <h1 class="green-title">{{ title }}</h1>
-                    </a>
-                    <p>{{ title }}</p>
-                    <a href="{{ buildUrl this 'news' }}" terget="_blank" class="btn btn-lg btn-green">Countune Reading...</a>
-                </div>
-                <br>
-                <div class="col-sm-6">
-                    <a href="{{ buildUrl this 'news' }}"><img class="img-responsive"
-                            src="{{ image }}" alt="{{ title }}"> </a>
-                </div>
-            </div>
+    <div class="container bg-gray" style="padding: 30px 20px;">
+        <div id="high-light-slider">
+        	{{#each highLights}}
+        	<div class="row project-item mb-20">
+				<div class="col-md-6 col-xs-12 mb-sm-20">
+					<a href="{{ buildUrl this 'news' }}" class="mb-20">
+						<h2 class="red-title">{{ title }}</h2>
+					</a>
+					<p class="mb-20">{{ title }}</p>
+					<a href="{{ buildUrl this 'news' }}" terget="_blank" class="btn p-0">Countune Reading...</a>
+				</div>
+        		<div class="col-md-6 col-xs-12">
+        			<a href="{{ buildUrl this 'news' }}">
+        				<img class="img-responsive" src="{{ image }}" alt="{{ title }}">
+					</a>
+				</div>
+			</div>
             {{/each}}
         </div>
     </div>

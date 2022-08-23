@@ -1,16 +1,20 @@
 /* It's registering a partial template with the name `news` */
 Handlebars.registerPartial('news', ` <div class="container">
     <div class="row">
-        <h1 class="green-title">News :</h1>
-        <br>
+    <div class="col-xs-12">
+    <h2 class="red-title block-title mb-20">
+        <i class="fa-solid fa-newspaper"></i>
+        News Archive:
+        </h2>
+</div>
+
         {{#each news}}
-            <div class="col-sm-4 slide-item">
-                <a href="{{buildUrl this 'news'}}"><img class="img-responsive" src="{{ image }}"
-                        alt="{{ image }}"></a>
-                <a href="{{buildUrl this 'news'}}">
-                    <h4 class="green-title">{{ title }}</h4>
-                </a>
-            </div>
+        <div class="col-md-3 col-xs-6 more-news-block">
+			<a href="{{buildUrl this 'news'}}" class="more-news-img">
+			<img src="{{ image }}" alt="{{ image }}">
+			</a>
+			<a href="{{buildUrl this 'news'}}"><h3 class="red-title title-trimmed">{{ title }}</h3></a>
+		</div>
         {{/each }}
     </div>
 </div>`);

@@ -35,11 +35,9 @@ Handlebars.registerPartial('footer', `<section class="container-fluid" id="foote
                             </div>
 
                             <div class="col-md-4 col-sm-12 footer-block" id="footer-info">
-                                    <h1>Coder News </h1>
-                                    <hr class="uk-article-divider">
-                                    © 2012 - 2022 Coder News
-                                    A division of dotdev inc.
-                            </div>
+                                    <h2>Coder News </h2>
+                                    <p>© 2012 - 2022 Coder News A division of dotdev inc</p>
+                         </div>
                         </div>
 
                             </div>

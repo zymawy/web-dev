@@ -1,7 +1,7 @@
 @import url("overrides.css");
 /* CSS Document */
 /* The code is making the image responsive. */
-.img-responsive{
+.img-responsive {
 	width: 100% !important;
 	height: auto;
 }
@@ -16,42 +16,52 @@
 }
 
 /* The code is changing the color of the pagination links to red. */
-.pagination li a{
+.pagination li a {
 	color: #e03438 !important;
 }
 
 /* The code is changing the background color of the active page to red and the text color to white. */
-.pagination li.active a{
+.pagination li.active a {
 	background-color: #e03438 !important;
 	color: #f4f4f4 !important;
 }
 
 /* Setting the background color of the page-inner-header to red. */
-.page-inner-header{
+.page-inner-header {
 	padding: 10px;
 	background: #e03438;
 	line-height: 100px;
 }
 
 /* The code is changing the color of the h1 tag to white. */
-.page-inner-header h1{
+.page-inner-header h1 {
 	color: #f4f4f4 !important;
 
 }
 
 /* The code is creating a class called btn-red. This class will be used to style the buttons on the page. */
-.btn-red{
+.btn-red {
 	background: #a13436;
-	border-radius: 0;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
 	color: #f4f4f4;
 }
 
 /* The code is changing the background color of the button when the mouse hovers over it. */
-.btn-green:hover{
+.btn-green:hover {
 	background: #064d26 !important;
 	color: #f4f4f4 !important;
+}
+
+.btn.btn-social {
+	padding: 6px 5px;
+	color: black;
+}
+
+.padded-20 {
+	padding: 20px;
+}
+
+.bg-gray {
+	background: #eee;
 }
 
 .home-block {
@@ -96,40 +106,39 @@
 }
 
 
-
 /* Setting the transition for all elements to 0.3 seconds. */
-* a, * img, button{
-	-moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-	color:#e03438;
-    text-decoration: none !important;
-	overflow: hidden;
-}
-
-/* Making the text color change to red when you hover over it. */
-* a:hover, * a:hover h1, * a:hover h2, * a:hover h3{
+* a, * img, button {
 	-moz-transition: all 0.3s linear;
 	-webkit-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
 	transition: all 0.3s linear;
-	color:#e03438 !important;
+	color: #e03438;
+	text-decoration: none !important;
+	overflow: hidden;
+}
+
+/* Making the text color change to red when you hover over it. */
+* a:hover, * a:hover h1, * a:hover h2, * a:hover h3 {
+	-moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	color: #e03438 !important;
 	text-decoration: underline;
 }
 
 /* Making the text float to the right. */
-.f-right{
+.f-right {
 	float: right !important;
 }
 
 /* Making the float left. */
-.f-left{
+.f-left {
 	float: left !important;
 }
 
 /* Setting the background color of the block title to a light gray. */
-.block-title{
+.block-title {
 	background: #f6f6f6;
 	z-index: 900;
 	padding-right: 20px;
@@ -142,7 +151,7 @@
 }
 
 /* Removing the padding and margin from the left and right side of the page. */
-.no-pm{
+.no-pm {
 	padding-right: 0 !important;
 	padding-left: 0 !important;
 	margin-right: 0 !important;
@@ -172,33 +181,33 @@
 }
 
 /* The code is setting the margin and padding to 0 for the container-fluid class. */
-.container-fluid{
+.container-fluid {
 	margin: 0 !important;
 	padding: 0 !important;
 }
 
 /* Setting the opacity of the image to 0.9. */
-a img{
+a img {
 	opacity: 0.9;
-	-webkit-opacity:0.9;
+	-webkit-opacity: 0.9;
 	-moz-opacity: 0.9;
 }
 
 /* Creating a class called block-icon. */
-.block-icon{
+.block-icon {
 	display: inline-block;
 	margin-right: 20px;
 }
 
 /* Making the image opaque when the mouse hovers over it. */
-a:hover img{
+a:hover img {
 	opacity: 1;
 	-webkit-opacity: 1;
 	-moz-opacity: 1;
 }
 
 /* Setting the direction of the text to left to right. */
-#lt-news{
+#lt-news {
 	direction: ltr;
 }
 
@@ -217,24 +226,31 @@ a:hover img{
 	object-fit: cover;
 }
 
+.lt-news-item--sm {
+	display: block;
+	max-height: 150px;
+	overflow: hidden;
+
+}
+
 
 /* Changing the opacity of the image when the mouse hovers over it. */
-section#latest-news a:hover img{
+section#latest-news a:hover img {
 	opacity: 1;
 	-webkit-opacity: 1;
 	-moz-opacity: 1;
-	-webkit-transform: scale(1.07,1.07);
-	-moz-transform:scale(1.07,1.07);
+	-webkit-transform: scale(1.07, 1.07);
+	-moz-transform: scale(1.07, 1.07);
 }
 
 /* Creating a class called news-latest. */
-.news-latest{
+.news-latest {
 	margin-bottom: 15px;
 	border-bottom: 7px solid #dbdbdb;
 }
 
 /* Setting the color of the title to red. */
-.red-title, .red-title a, .white-title{
+.red-title, .red-title a, .white-title {
 	color: #a13436 !important;
 	text-decoration: none;
 	z-index: 1000;
@@ -244,19 +260,18 @@ section#latest-news a:hover img{
 
 .title-trimmed {
 	white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 /* The code is changing the color of the title to white. */
-.white-title{
+.white-title {
 	color: #ffffff !important;
 }
 
 
-
 /* Creating a bar graph. */
-.title-graph{
+.title-graph {
 	display: block;
 	width: 80%;
 	height: 5px;
@@ -269,18 +284,20 @@ section#latest-news a:hover img{
 
 
 /* Removing the outline that appears when you click on a link. */
-a:focus{outline:none}
+a:focus {
+	outline: none
+}
 
 /* Setting the font family for the h1, h2, h3, and h4 tags. */
-h1,h2,h3,h4{
+h1, h2, h3, h4 {
 	font-family: 'Roboto', sans-serif;
-	color:#696969;
+	color: #696969;
 }
 
 /* Changing the color of the text when you highlight it. */
 ::-moz-selection {
 	background-color: #a13436;
-    color: #f4f4f4;
+	color: #f4f4f4;
 }
 
 /* Changing the color of the text when it is selected. */
@@ -290,23 +307,23 @@ h1,h2,h3,h4{
 }
 
 /* Clearing the float. */
-.clear{
-	clear:both;
+.clear {
+	clear: both;
 }
 
 /* Setting the font family, font size, color, background, and line height for the body of the page. */
-body{
+body {
 	font-family: 'Roboto', sans-serif;
-	font-size:16px;
-	color:#494949;
+	font-size: 16px;
+	color: #494949;
 	background: #f6f6f6;
-	line-height:1.5;
+	line-height: 1.5;
 }
 
 /* Setting the background color of the header-top div to #191734, setting the height to 120px, setting the min-height to
 50px, setting the padding to 10px 0, setting the padding-top to 0, setting the position to relative, setting the top to
 0, setting the z-index to 1, and setting the -webkit-transform to translate3d(0, 0, 0). */
-#header-top{
+#header-top {
 	background: #191734;
 	height: 120px;
 	min-height: 50px;
@@ -318,14 +335,14 @@ body{
 	-webkit-transform: translate3d(0, 0, 0);
 }
 
-#nav-trigger-name{
+#nav-trigger-name {
 	display: block;
 	width: auto;
 	height: inherit;
 	float: left;
 	position: relative;
 	list-style-type: none;
-	padding:0;
+	padding: 0;
 }
 
 /* Creating a CSS rule that will apply to the element with the id of news-name. */
@@ -334,12 +351,12 @@ body{
 }
 
 /* Making the list items display inline. */
-#nav-trigger-name li{
+#nav-trigger-name li {
 	display: inline-block;
 }
 
 
-li.nav-trigger{
+li.nav-trigger {
 	display: block;
 	width: 40px;
 	height: 40px;
@@ -357,11 +374,11 @@ li.nav-trigger{
 		margin-bottom: 20px;
 	}
 
-	#logo{
+	#logo {
 		margin-top: -60px !important;
 	}
 
-	#logo-img{
+	#logo-img {
 		width: 140px;
 	}
 
@@ -375,51 +392,56 @@ li.nav-trigger{
 		margin-bottom: 30px;
 	}
 
-	.tp-leftarrow{display: none;}
-	.tp-rightarrow{display: none;}
+	.tp-leftarrow {
+		display: none;
+	}
 
-	#header-top{
+	.tp-rightarrow {
+		display: none;
+	}
+
+	#header-top {
 		height: 90px;
 	}
 
-	h1#news-head-name{
+	h1#news-head-name {
 		font-size: 20px;
 		line-height: 30px;
 		margin-bottom: 0;
 	}
 
-	#news-head-slogan{
+	#news-head-slogan {
 		font-size: 18px;
 	}
 
-	li.nav-trigger{
+	li.nav-trigger {
 		margin-top: 0;
 	}
 
-	#logo{
+	#logo {
 		margin-top: -50px !important;
 	}
 
-	#logo-img{
+	#logo-img {
 		width: 100px;
 	}
 
-	#news-block-title h1{
+	#news-block-title h1 {
 		font-size: 20px;
 	}
 
-	#news-block-title a{
+	#news-block-title a {
 		float: left !important;
 		margin-right: 0 !important;
 	}
 
-	#projects-block-title div h1{
+	#projects-block-title div h1 {
 		font-size: 20px;
 	}
 }
 
 /* Styling the navigation trigger. */
-#nav-tr{
+#nav-tr {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
@@ -436,22 +458,22 @@ li.nav-trigger{
 }
 
 /* Making the navigation bar transparent when the mouse is not hovering over it. */
-#nav-tr:hover{
+#nav-tr:hover {
 	opacity: 1;
 	-webkit-opacity: 1;
 	-moz-opacity: 1;
 }
 
-#nav-tr:focus{
+#nav-tr:focus {
 	outline: none;
 }
 
-#news-head-name{
+#news-head-name {
 	color: #dbe0cc;
 	margin-bottom: 5px;
 }
 
-#news-head-slogan{
+#news-head-slogan {
 	margin: 0 !important;
 	color: #e03438;
 }
@@ -459,7 +481,7 @@ li.nav-trigger{
 /* The code is setting the display of the social links to inline-block, setting the width to 272px, setting the float
 to right, setting the padding to 0, setting the list-style-type to none, setting the position to relative, and setting
 the margin-top to 10px. */
-#social-links{
+#social-links {
 	display: inline-block;
 	width: 272px;
 	float: right;
@@ -470,7 +492,7 @@ the margin-top to 10px. */
 }
 
 /* Setting the display, float, margin, width, and height of the list items. */
-#social-links li{
+#social-links li {
 	display: inline-block;
 	float: left;
 	margin-right: 18px;
@@ -478,18 +500,18 @@ the margin-top to 10px. */
 	height: 32px;
 }
 
-#social-links li:last-child{
+#social-links li:last-child {
 	margin-right: 0;
 }
 
 
-#social-links li a{
+#social-links li a {
 	opacity: 0.3;
 	-webkit-opacity: 0.3;
 	-moz-opacity: 0.3;
 }
 
-#social-links li a:hover{
+#social-links li a:hover {
 	opacity: 1;
 	-webkit-opacity: 1;
 	-moz-opacity: 1;
@@ -499,7 +521,7 @@ the margin-top to 10px. */
 	width: 100% !important;
 }
 
-#mo-social-links{
+#mo-social-links {
 	display: none;
 	padding: 0;
 	list-style-type: none;
@@ -508,7 +530,7 @@ the margin-top to 10px. */
 }
 
 /* Setting the style for the social links. */
-#mo-social-links li.mo-social-links-li{
+#mo-social-links li.mo-social-links-li {
 	display: inline-block;
 	float: left;
 	margin-left: 18px;
@@ -516,12 +538,12 @@ the margin-top to 10px. */
 	height: 32px;
 }
 
-#mo-social-links li.mo-social-links-li:last-child{
+#mo-social-links li.mo-social-links-li:last-child {
 	margin-left: 0;
 }
 
 
-#mo-social-links li.mo-social-links-li a.mo-social-links-a{
+#mo-social-links li.mo-social-links-li a.mo-social-links-a {
 	display: block;
 	width: 32px;
 	height: 32px;
@@ -533,7 +555,7 @@ the margin-top to 10px. */
 	border: none;
 }
 
-#mo-social-links li.mo-social-links-li a.mo-social-links-a:hover{
+#mo-social-links li.mo-social-links-li a.mo-social-links-a:hover {
 	opacity: 1;
 	background: transparent;
 	-webkit-opacity: 1;
@@ -549,7 +571,7 @@ the margin-top to 10px. */
 		display: inline-block;
 	}
 
-	#news-block-title h1{
+	#news-block-title h1 {
 		font-size: 20px;
 	}
 }
@@ -557,25 +579,30 @@ the margin-top to 10px. */
 /* A media query. It is saying that if the screen is 700px or less, then the font size of the news-head-name id will be
 2em. */
 @media all and (max-width: 700px) {
-	#news-head-name{
+	#news-head-name {
 		font-size: 2em;
 	}
+
 	#news-trophies .flexable {
 		flex-direction: column;
 	}
+
 	#news-trophies .flexable h4 {
 		margin-bottom: 20px;
 	}
+	.mb-sm-20 {
+		margin-bottom: 20px !important;
+	}
 }
 
-#logo{
+#logo {
 	z-index: 900;
 	margin-top: -120px;
 	position: relative;
 	text-align: center;
 }
 
-#logo a{
+#logo a {
 	display: inline-block;
 	margin: 0 auto;
 	position: relative;
@@ -583,20 +610,20 @@ the margin-top to 10px. */
 
 
 .bannercontainer {
-	width:100%;
-	position:relative;
-	padding:0;
+	width: 100%;
+	position: relative;
+	padding: 0;
 }
 
 
-.forcefullwidth_wrapper_tp_banner{
+.forcefullwidth_wrapper_tp_banner {
 	margin-top: -90px;
 	position: relative;
 	top: 0;
 }
 
 /* The code is creating a button that is 50px high and 100% wide. The button is red and has white text. */
-a.btn-more{
+a.btn-more {
 	display: block;
 	width: auto;
 	height: 50px;
@@ -605,15 +632,15 @@ a.btn-more{
 	font-size: 15px;
 	color: #fff;
 	float: right;
-	padding:0 30px;
+	padding: 0 30px;
 }
 
-#wide-title{
+#wide-title {
 	position: relative;
 	margin-top: 50px !important;
 }
 
-.hor-line{
+.hor-line {
 	width: 100%;
 	height: 5px;
 	position: absolute;
@@ -622,58 +649,56 @@ a.btn-more{
 }
 
 /* Setting the background image of the element to a horizontal line. */
-.with-hor-line{
+.with-hor-line {
 	background: url("../assets/images/hor-line-tex.gif") repeat-x center;
 	vertical-align: middle;
 }
 
-.wide-block-title{
+.wide-block-title {
 	position: relative;
 	text-align: center;
 	background: #f6f6f6;
 	z-index: 99;
 }
 
-.wide-block-title .wide-block-title-green{
+.wide-block-title .wide-block-title-green {
 	color: #a13436;
 	margin-bottom: 4px !important;
 }
 
-.wide-block-title .wide-block-title-grey{
+.wide-block-title .wide-block-title-grey {
 	color: #717171;
 	margin-top: 2px !important;
 }
 
-#news-trophies{
+#news-trophies {
 	position: relative;
 	background: #7a7a7a;
 	padding: 30px 0 !important;
 }
 
-#news-trophies h2{
-	
-	margin-bottom:5px;
+#news-trophies h2 {
+
+	margin-bottom: 5px;
 	color: #f6f6f6;
 }
 
-#news-trophies h4{
-	color:#f8f8f8;
+#news-trophies h4 {
+	color: #f8f8f8;
 }
 
 
-
-.trophy-item{	
+.trophy-item {
 	text-align: center;
 }
 
 
-
-.trophy-item a{
+.trophy-item a {
 	text-align: center;
 	color: #f6f6f6 !important;
 }
 
-.trophy-item a img{
+.trophy-item a img {
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 4px;
@@ -681,11 +706,11 @@ a.btn-more{
 
 
 /* Styling the link to the about page. */
-a#know-us-more{
+a#know-us-more {
 	display: block;
 	padding: 10px;
 	text-align: center;
-	color:#e0e0e0;
+	color: #e0e0e0;
 	font-size: 1.8em;
 	font-weight: normal;
 	line-height: 80px;
@@ -694,7 +719,7 @@ a#know-us-more{
 	background: #094022;
 }
 
-a#know-us-more:hover{
+a#know-us-more:hover {
 	background: #e0e0e0;
 	color: #094022;
 }
@@ -703,13 +728,13 @@ a#know-us-more:hover{
 	margin: 0 0 15px 0;
 }
 
-.more-news-block p{
+.more-news-block p {
 	margin: 3px 0 0 0;
 	font-size: 11px;
 	color: #717171;
 }
 
-.more-news-img, .big-news-image{
+.more-news-img, .big-news-image {
 	display: block;
 	margin-bottom: 5px;
 }
@@ -725,39 +750,40 @@ a#know-us-more:hover{
 	object-fit: cover;
 }
 
-#news-projects{
+#news-projects {
 	background: #fefefe;
 	padding-top: 30px !important;
 }
 
-.slide-holder{
+.slide-holder {
 	direction: ltr;
 }
 
-.slide-item{
+.slide-item {
 	text-align: center;
 }
-.slide-item a{
+
+.slide-item a {
 	display: block;
 	margin-bottom: 10px;
 }
 
-.reusable-block{
+.reusable-block {
 	margin-bottom: 20px;
 	position: relative;
 }
 
-.reusable-block:last-child{
+.reusable-block:last-child {
 	margin-bottom: 0;
 }
 
-.reports-list{
+.reports-list {
 	display: block;
 	list-style-type: none;
 }
 
 /* Setting the style for the list items in the reports list. */
-.reports-list li{
+.reports-list li {
 	display: block;
 	position: relative;
 	padding-top: 20px;
@@ -769,30 +795,30 @@ a#know-us-more:hover{
 	border-bottom: 1px solid #c3c3c3;
 }
 
-.reports-list li:hover{
+.reports-list li:hover {
 
 	background: #fefefe;
 }
 
 
-.reports-list  a.rep-dl{
+.reports-list a.rep-dl {
 	display: block;
 	min-width: 20px;
 	min-height: 23px;
 	margin: auto 0;
-	background: url("../assets/images/ics/report-dl.png") center  no-repeat;
+	background: url("../assets/images/ics/report-dl.png") center no-repeat;
 	opacity: 0.6;
 	-webkit-opacity: 0.6;
 	-moz-opacity: 0.6;
 }
 
-.reports-list  a.rep-dl:hover{
+.reports-list a.rep-dl:hover {
 	opacity: 1;
 	-webkit-opacity: 1;
 	-moz-opacity: 1;
 }
 
-.reports-list li .rep-desc{
+.reports-list li .rep-desc {
 	color: #444;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
@@ -800,44 +826,45 @@ a#know-us-more:hover{
 	margin: 0 !important;
 }
 
-#horonr-board{
-	padding:20px !important;
+#horonr-board {
+	padding: 20px !important;
 	background: #a13436;
 }
 
-#horonr-board a:hover h3{
+#horonr-board a:hover h3 {
 	text-decoration: none;
 	color: #fff !important;
 }
 
-#horonr-board p{
+#horonr-board p {
 	color: #fff !important;
 }
 
 
 /* The above code is creating a class called photo-gal-item. */
-.photo-gal-item{
+.photo-gal-item {
 	display: block;
 	background: #4674c2;
 	margin-bottom: 30px;
 }
 
-a.photo-gal-item:hover img{
+a.photo-gal-item:hover img {
 	opacity: 1;
 	-webkit-opacity: 1;
 	-moz-opacity: 1;
-	-webkit-transform: scale(0.9,0.88);
-	-moz-transform:scale(0.9,0.88);
+	-webkit-transform: scale(0.9, 0.88);
+	-moz-transform: scale(0.9, 0.88);
 }
 
 /* Changing the footer background color, padding, and margin. */
-#footer{
+#footer {
 	background: #e8e8e8;
 	padding-top: 30px !important;
 	padding-bottom: 0px !important;
 	margin-top: 30px !important;
 }
-.footer-block{
+
+.footer-block {
 	margin-bottom: 30px;
 }
 
@@ -845,7 +872,7 @@ a.photo-gal-item:hover img{
 	margin: 0 0 10px 0;
 }
 
-.footer-nav{
+.footer-nav {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -854,7 +881,7 @@ a.photo-gal-item:hover img{
 }
 
 /* The code is creating a list of items that will be displayed in the footer. */
-.footer-nav li{
+.footer-nav li {
 	display: block;
 	list-style: none;
 	line-height: 20px;
@@ -867,18 +894,18 @@ a.photo-gal-item:hover img{
 	transition: all 0.3s linear;
 }
 
-.footer-nav li:last-child{
+.footer-nav li:last-child {
 	border-bottom: none;
 }
 
-.footer-nav li:hover{
+.footer-nav li:hover {
 	background: #f0f0f0 url("../assets/images/ics/check.png") left no-repeat;
 }
 
 
 /* The code is setting the display to block, width to inherit, height to inherit, line-height to inherit, color to
 #7c7c7c, and text-decoration to underline. */
-.footer-nav li a{
+.footer-nav li a {
 	display: block;
 	width: inherit;
 	height: inherit;
@@ -887,71 +914,62 @@ a.photo-gal-item:hover img{
 	text-decoration: underline;
 }
 
-.footer-nav li a:hover{
+.footer-nav li a:hover {
 	color: #e03438 !important;
 }
 
-#footer-info h1, #footer-info h2{
-	margin-bottom: 4px !important;
+.p-0 {
+	padding: 0 !important;
 }
 
-#footer-info h2{
-	margin-top: 0 !important;
-}
-
-
-
-#footer-info p{
-	text-align: right !important;
-	font-size: 0.9em !important;
-}
-
-#footer-logo{
+#footer-logo {
 	display: block;
 	text-align: center;
 	margin: 0 auto;
 }
 
-#content-bar{
+#content-bar {
 	margin-bottom: 20px;
 }
 
-.sidebar-block{
+.sidebar-block {
 	margin-bottom: 30px;
 }
 
-.comment-item{
+.comment-item {
 	position: relative;
 	margin-bottom: 30px;
 }
 
-.comment-avatar{
+.comment-avatar {
 	background: #e03438;
 	min-height: 30px;
 	margin-right: 20px;
 }
-.comment-info{
+
+.comment-info {
 	padding-top: 30px;
 	background: #e8e8e8;
 }
 
-.gallery-album-cont{
+.gallery-album-cont {
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid #dbdbdb;
 }
 
-#projects-page-holder{
+#projects-page-holder {
 	direction: ltr;
 }
 
-#projects-page-holder .project-item{
+#projects-page-holder .project-item {
 	direction: rtl;
 }
 
 h3, .h3 {
 	font-size: 20px;
 }
+
 .flexable {
 	display: flex;
 	align-items: center;
@@ -979,6 +997,7 @@ h3, .h3 {
 	width: 80px;
 	height: 80px;
 }
+
 .lds-dual-ring:after {
 	content: " ";
 	display: block;
@@ -991,6 +1010,13 @@ h3, .h3 {
 	animation: lds-dual-ring 1.2s linear infinite;
 	text-align: center;
 }
+
+.partner-entry img {
+	display: inline-block;
+	max-width: 150px;
+	max-height: 120px;
+}
+
 @keyframes lds-dual-ring {
 	0% {
 		transform: rotate(0deg);
