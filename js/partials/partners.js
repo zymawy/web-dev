@@ -1,5 +1,5 @@
 /* Registering a partial template. */
-Handlebars.registerPartial('partners', ` 
+Handlebars.registerPartial('partners', `
 <div class="home-block">
 <section class="container-fluid" id="success-partners">
     <div class="container">
@@ -7,11 +7,11 @@ Handlebars.registerPartial('partners', `
         <h1 class="red-title block-title flexable no-m no-p">
         <i class="fa-solid fa-handshake"></i>
             For Partners
-        </h1>       
-    </div> 
+        </h1>
+    </div>
         <div class="col-md-12 slide-holder" id="partners-items">
             <div class="slide-item contain">
-                <a href="#"><img src="/assets/images/temp/partners/01.jpg" alt="Project Thmb"></a>
+                <a href="#"><img src="/assets/images/temp/partners/1-laravel.svg" alt="Project Thmb"></a>
             </div>
             <div class="slide-item contain">
                 <a href="#"><img src="/assets/images/temp/partners/02.jpg" alt="Project Thmb"></a>
