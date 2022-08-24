@@ -21,7 +21,14 @@ Handlebars.registerPartial('nav', `<nav class="st-menu st-effect-3" id="main-nav
             <a class="active-nav" href="/articles.html">News</a>
             {{else}}
             <a href="/articles.html">News</a>
-         {{/if}} 
+         {{/if}}
+        </li>
+        <li>
+        {{#if (isCurrent 'report') }}
+            <a class="active-nav" href="/report.html">Report</a>
+            {{else}}
+            <a href="/report.html">Report</a>
+         {{/if}}
         </li>
     </ul>
     <ul id="mo-social-links">

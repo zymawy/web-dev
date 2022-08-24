@@ -3,76 +3,542 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reports</title>
+    <title> Coder News — For Developers From Developers</title>
+    <!-- A meta tag that is used to describe the website. -->
+    <meta content="Coder News" name="description">
+    <meta content="Coder News — For Developers From Developers" name="keywords">
+    <meta content="Hamza Mohammad" name="author" />
+    <meta content="all" name="robots">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="en" property="og:locale" />
+    <meta content="website" property="og:type" />
+    <meta content="Coder News — For Developers From Developers" property="og:title" />
+    <meta content="https://www.yourdomain.com/" property="og:url" />
+    <meta content="Coder News — For Developers From Developers" property="og:site_name" />
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/handlebars-v4.7.7.js" type="text/javascript"></script>
+    <!-- Importing all the css files that are needed for the website to work. -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="styles/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="styles/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="styles/component.css" rel="stylesheet" type="text/css" />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <h1>Hamza Mallam Mosa</h1>
 
-    <ol>
-        <li>
-            <b>Introduction:</b> What is the essential story being told by your site and what type of structure did you
-            choose
-            to
-            implement?
+    <div class="container-fluid st-container" id="st-container">
+        <!-- General Container For the Transition menu -->
+        <div class="st-pusher">
+            <!-- A Nav Partial Could Be Found In   (js/partials/nav.js) -->
+            <div id="container-nav">
+                <script id="nav-template" type="text/x-handlebars-template">
+                {{>nav }}
+                            </script>
+            </div>
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <!-- A Header Partial Could Be Found In   (js/partials/header.js) -->
+                    <div id="container-header">
+                        <div class="flexable">
+                            <div class="lds-dual-ring"></div>
+                        </div>
+                        <script id="header-template" type="text/x-handlebars-template">
+                        {{>header }}
+                    </script>
+                    </div>
+                    <div class="container" id="content-container">
+                        <div class="row">
+                            <h1>
+                                Hamza Mallam Mosa Mohammad
+                                <blockquote>
+                                    <small>#200104867</small>
+                                </blockquote>
+                            </h1>
 
-            <p>
-                it's coder news, from developers to developers. sharing knowledge in such a high-demand industry as tech
-                is a valuable thing to do. A substantial amount of understanding will also be gained by the developers
-                through the teaching process.
-            </p>
-        </li>
-        <li>
-            <b>Inspiration:</b> State 3 things that have inspired you when creating your website (e.g. guest speakers,
-            websites,
-            artists, blogs).
-            <p>
-                Tech news is one of my favorite things. It is one of the best resources for me in order to gain more
-                knowledge about the tech industry and gain valuable information.
-                Firstly, I was inspired by laravel-news since I'm a team lead and should stay on top of the latest tech
-                industry news. A second inspiration comes from a magazine dedicated to developers and designers. the
-                smashingmagazine is considered an old and valuable one. Finally, Syrian Researchers collect the latest
-                news for the tech industry on its local (Arabic language) news blog.
+                            <ol>
+                                <li>
+                                    <p></p><b>Introduction:</b> What is the essential story being told by your site and
+                                    what
+                                    type of structure did you
+                                    choose
+                                    to
+                                    implement?
+                                    </p>
 
+                                    <blockquote>
+                                        it's coder news, from developers to developers. sharing knowledge in such a
+                                        high-demand industry as tech
+                                        is a valuable thing to do. A substantial amount of understanding will also be
+                                        gained by the developers
+                                        through the teaching process.
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <p></p><b>Inspiration:</b> State 3 things that have inspired you when creating your
+                                    website
+                                    (e.g. guest speakers,
+                                    websites,
+                                    artists, blogs).
+                                    </p>
+                                    <blockquote>
+                                        Tech news is one of my favorite things. It is one of the best resources for me
+                                        in order to gain more
+                                        knowledge about the tech industry and gain valuable information.
+                                        Firstly, I was inspired by laravel-news since I'm a team lead and should stay on
+                                        top of the latest tech
+                                        industry news. A second inspiration comes from a magazine dedicated to
+                                        developers and designers. the
+                                        smashingmagazine is considered an old and valuable one. Finally, Syrian
+                                        Researchers collect the latest
+                                        news for the tech industry on its local (Arabic language) news blog.
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <ol>
+                                            <li>laravel-news (<a
+                                                    href="https://laravel-news.com/">https://laravel-news.com</a>)</li>
+                                            <li>smashingmagazine (<a
+                                                    href="https://www.smashingmagazine.com/">https://www.smashingmagazine.com</a>)
+                                            </li>
+                                            <li>Syrian Researchers (<a
+                                                    href="https://www.syr-res.com/">https://www.syr-res.com</a>)</li>
+                                            <li> Daily dev (<a href="https://daily.dev/">https://daily.dev</a>)</li>
+                                        </ol>
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Accessibility:</b> State 3 ways in which your site is accessible to those
+                                        with
+                                        different abilities and
+                                        needs
+                                        (for
+                                        example those with visual impairment)
+                                    </p>
+                                    <blockquote>
+                                        <ol>
+                                            <li>
+                                                A will structure hierarchy html
+                                            </li>
+                                            <li>
+                                                modren HTML5
+                                            </li>
+                                        </ol>
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Usability:</b> State 3 ways in which you considered the usability of your
+                                        site.
+                                    </p>
+                                    <blockquote>
+                                        <ol>
+                                            <li>
+                                                An optimized mobile experience. The elements of the website are placed
+                                                where the thumb can easily reach them.
+                                            </li>
+                                            <li>
+                                                A hierarchy of visual elements. Maintains my website's focus on what
+                                                matters most to my readers.
+                                            </li>
+                                            <li>
+                                                Establishing credibility. My readers expect each page to meet their
+                                                expectations.
+                                            </li>
+                                            </ul>
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Learning:</b> state 3 things you had to learn or find out to create your
+                                        site.
+                                        How did you achieve that?
+                                    </p>
+                                    <blockquote>
+                                        will it depends, the web development industry is a growth one. I will pick the
+                                        latest & robust
+                                        framework/lib out there and create a strong/user-friendly website. I think the
+                                        three things that I'm
+                                        missing is a strong understanding of the Browser API, by having a robust
+                                        knowledge of it will help you
+                                        create more lightweight and performance enhancement. secondly, powerful tools
+                                        allow me to test my
+                                        website for accessibility, usability ..etc like Lighthouse from Google. lastly,
+                                        it might be good if I
+                                        discover smashingmagazine this would give more inspiration.
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Evaluation I:</b> What aspects of your work do you think were particularly
+                                        successful? Why?
+                                    </p>
+                                    <blockquote> Handlebars JS's powerful template system allows me to reuse components
+                                        and
+                                        partials, saving me time and
+                                        effort. Aside from these, I can also communicate with my component/partial using
+                                        events/listeners. In
+                                        order to let handlebars know that data has been retrieved from the server via
+                                        JSON file, I used an event
+                                        to let my components know that there is new data to display and manipulate in
+                                        the DOM. </blockquote>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Evaluation II:</b> What aspects of your work could be improved? How might you
+                                        do
+                                        things differently
+                                        another
+                                        time?
+                                    </p>
+                                    <blockquote>
+                                        My initial impressions of the website are positive. next time, A user-friendly,
+                                        simplest, and user-friendly interface will definitely be considered by me.
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Resources:</b> What resources did you use in your work? List any sources of
+                                        information, libraries,
+                                        plugins,
+                                        code or
+                                        tools (you should also indicate inclusions from other sources within your code
+                                        using
+                                        comments)
+                                    </p>
+                                    <blockquote>
+                                        <ol>
+                                            <li>
+                                                <a href="https://getbootstrap.com">bootstrap</a>
+                                                <small>Licensed unde <b>MIT</b></small>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://github.com/dailydotdev/daily-api/blob/master/seeds/Post.json">Article/news
+                                                    data</a>
+                                                <small>Licensed under <b> AGPL-3.0</b></small>
+                                            </li>
+                                            <li>
+                                                <a href="https://jquery.com/download/">jQuery</a>
+                                                <small>Licensed under <b>MIT</b></small>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://github.com/handlebars-lang/handlebars.js">handlebars</a>
+                                                <small>Licensed under <b>MIT</b></small>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/ded/bonzo">bonzo (classie)</a>
+                                                <small>Licensed under <b>MIT</b></small>
+                                            </li>
 
-                1. laravel-news (https://laravel-news.com/)
-                2. smashingmagazine (https://www.smashingmagazine.com/)
-                3. Syrian Researchers (https://www.syr-res.com/)
-            </p>
+                                            <li>
+                                                <a
+                                                    href="https://github.com/codrops/SidebarTransitions">sidebarEffects</a>
+                                                <small>Licensed under <b>MIT</b></small>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/OwlCarousel2/OwlCarousel2">Owl Carousel2</a>
+                                                <small>Licensed under <b>MIT</b></small>
+                                            </li>
+                                            <li>
+                                                <a href="https://fonts.google.com/">Google Fonts</a>
+                                                <small>Licensed under <b>SIL Open Font</b></small>
+                                            </li>
+
+                                            <li>
+                                                <a href="http://logosvg.com/category/b/">Partners Logos</a>
+                                                <small>Licensed under <b>By Website</b></small>
+                                            </li>
+                                        </ol>
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Appendices:</b> Site map, wireframes and mock-ups,
+                                    </p>
+                                    <div>
+                                        <h2>Site Map</h2>
+                                        <blockquote>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="/">Home</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/contact.html">Contact Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/articles.html">News</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/article.html?Cant-be-bothered-Why-some-of-us-are-more-motivated-than-others&id=_6J1R6VA_">Singl
+                                                        Article</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/search.html?search=github">Search</a>
+                                                </li>
+                                            </ul>
+                                        </blockquote>
+                                    </div>
+                                    <div class="row">
+                                        <h2>Wireframes</h2>
+                                        <hr />
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <h4 style="margin: 10px;""> Home Page
+                                                    <blockquote>
+                                                        <small>
+                                                            <span class=" text-danger">Desktop</span>,
+                                                    <span class="text-warning">Tablet</span>,
+                                                    <span class="text-success">Mobile</span>
+                                                    </small>
+                                                    </blockquote>
+                                                </h4>
+
+                                                </h2>
+                                                <img class=" img-rounded img-responsive" src="/wireframes/Home Page.png"
+                                                    alt="Home Page">
+                                            </li>
+                                            <hr />
+                                            <li>
+                                                <h4 style="margin: 10px;""> Articles Page
+                                                    <blockquote>
+                                                        <small>
+                                                            <span class=" text-danger">Desktop</span>,
+                                                    <span class="text-warning">Tablet</span>,
+                                                    <span class="text-success">Mobile</span>
+                                                    </small>
+                                                    </blockquote>
+                                                </h4>
+
+                                                </h2>
+                                                <img class=" img-rounded img-responsive"
+                                                    src="/wireframes/Articles Page.png" alt="Articles Page">
+                                            </li>
+                                            <hr />
+                                            <li>
+                                                <h4 style="margin: 10px;""> Article Page
+                                                    <blockquote>
+                                                        <small>
+                                                            <span class=" text-danger">Desktop</span>,
+                                                    <span class="text-warning">Tablet</span>,
+                                                    <span class="text-success">Mobile</span>
+                                                    </small>
+                                                    </blockquote>
+                                                </h4>
+
+                                                </h2>
+                                                <img class=" img-rounded img-responsive"
+                                                    src="/wireframes/Article Page.png" alt="Article Page">
+                                            </li>
+                                            <hr />
+                                            <li>
+                                                <h4 style="margin: 10px;""> Search Page
+                                                    <blockquote>
+                                                        <small>
+                                                            <span class=" text-danger">Desktop</span>,
+                                                    <span class="text-warning">Tablet</span>,
+                                                    <span class="text-success">Mobile</span>
+                                                    </small>
+                                                    </blockquote>
+                                                </h4>
+
+                                                </h2>
+                                                <img class=" img-rounded img-responsive"
+                                                    src="/wireframes/Search Page.png" alt="Search Page">
+                                            </li>
+                                            <hr />
+                                            <li>
+                                                <h4 style="margin: 10px;""> Contact Us Page
+                                                    <blockquote>
+                                                        <small>
+                                                            <span class=" text-danger">Desktop</span>,
+                                                    <span class="text-warning">Tablet</span>,
+                                                    <span class="text-success">Mobile</span>
+                                                    </small>
+                                                    </blockquote>
+                                                </h4>
+
+                                                </h2>
+                                                <img class=" img-rounded img-responsive"
+                                                    src="/wireframes/Contact Us.png" alt="Contact Us Page">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <h2>Mock-ups</h2>
+                                        <hr />
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <h4 style="margin: 10px;""> Home Page</h4>
+                                                <div class=" row">
+                                                    <div class="col-4 col-md-4">
+                                                        <blockquote>
+                                                            <span class=" text-danger">Desktop</span>
+                                                        </blockquote>
+                                                        <img class="img-rounded img-responsive"
+                                                            src="/mockups/Home-Page-Lg.png" alt="Home Page Lg">
+                                                    </div>
+                                                    <div class="col-4 col-md-4">
+                                                        <blockquote>
+                                                            <span class="text-warning">Tablet</span>
+                                                        </blockquote>
+                                                        <img class="img-rounded img-responsive"
+                                                            src="/mockups/Home-Page-Md.png" alt="Home Page Md">
+                                                    </div>
+                                                    <div class="col-4 col-md-4">
+                                                        <blockquote>
+                                                            <span class="text-success">Mobile</span>
+                                                        </blockquote>
+                                                        <img class="img-rounded img-responsive"
+                                                            src="/mockups/Home-Page-Sm.png" alt="Home Page SM">
+                                                    </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <h4 style="margin: 10px;""> Articles Page</h4>
+                                                <div class=" row">
+                                        <div class="col-4 col-md-4">
+                                            <blockquote>
+                                                <span class=" text-danger">Desktop</span>
+                                            </blockquote>
+                                            <img class="img-rounded img-responsive" src="/mockups/Articles-Page-Lg.png"
+                                                alt="Articles Page Lg">
+                                        </div>
+                                        <div class="col-4 col-md-4">
+                                            <blockquote>
+                                                <span class="text-warning">Tablet</span>
+                                            </blockquote>
+                                            <img class="img-rounded img-responsive" src="/mockups/Articles-Page-Md.png"
+                                                alt="Articles Page Md">
+                                        </div>
+                                        <div class="col-4 col-md-4">
+                                            <blockquote>
+                                                <span class="text-success">Mobile</span>
+                                            </blockquote>
+                                            <img class="img-rounded img-responsive" src="/mockups/Articles-Page-Sm.png"
+                                                alt="Articles Page SM">
+                                        </div>
+                        </div>
+                        </li>
+                        <li>
+                            <h4 style="margin: 10px;""> Article Page</h4>
+                                        <div class=" row">
+                                <div class="col-4 col-md-4">
+                                    <blockquote>
+                                        <span class=" text-danger">Desktop</span>
+                                    </blockquote>
+                                    <img class="img-rounded img-responsive" src="/mockups/Article-Page-Lg.png"
+                                        alt="Article Page Lg">
+                                </div>
+                                <div class="col-4 col-md-4">
+                                    <blockquote>
+                                        <span class="text-warning">Tablet</span>
+                                    </blockquote>
+                                    <img class="img-rounded img-responsive" src="/mockups/Article-Page-Md.png"
+                                        alt="Article Page Md">
+                                </div>
+                                <div class="col-4 col-md-4">
+                                    <blockquote>
+                                        <span class="text-success">Mobile</span>
+                                    </blockquote>
+                                    <img class="img-rounded img-responsive" src="/mockups/Article-Pag-Sm.png"
+                                        alt="Article Page SM">
+                                </div>
+                    </div>
+                    </li>
+                    <li>
+                        <h4 style="margin: 10px;""> Search Page</h4>
+                                                <div class=" row">
+                            <div class="col-4 col-md-4">
+                                <blockquote>
+                                    <span class=" text-danger">Desktop</span>
+                                </blockquote>
+                                <img class="img-rounded img-responsive" src="/mockups/Search-Page-Lg.png"
+                                    alt="Search Page Lg">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <blockquote>
+                                    <span class="text-warning">Tablet</span>
+                                </blockquote>
+                                <img class="img-rounded img-responsive" src="/mockups/Search-Page-Md.png"
+                                    alt="Search Page Md">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <blockquote>
+                                    <span class="text-success">Mobile</span>
+                                </blockquote>
+                                <img class="img-rounded img-responsive" src="/mockups/Search-Home-Sm.png"
+                                    alt="Search Page SM">
+                            </div>
+                </div>
+                </li>
+                <li>
+                    <h4 style="margin: 10px;""> Contact Us Page</h4>
+                                            <div class=" row">
+                        <div class="col-4 col-md-4">
+                            <blockquote>
+                                <span class=" text-danger">Desktop</span>
+                            </blockquote>
+                            <img class="img-rounded img-responsive" src="/mockups/Contact Us Lg.png"
+                                alt="Contact Us Page Lg">
+                        </div>
+                        <div class="col-4 col-md-4">
+                            <blockquote>
+                                <span class="text-warning">Tablet</span>
+                            </blockquote>
+                            <img class="img-rounded img-responsive" src="/mockups/Contact Us Md.png"
+                                alt="Contact Us Page Md">
+                        </div>
+                        <div class="col-4 col-md-4">
+                            <blockquote>
+                                <span class="text-success">Mobile</span>
+                            </blockquote>
+                            <img class="img-rounded img-responsive" src="/mockups/Contact Us Sm.png"
+                                alt="Contact Us Page SM">
+                        </div>
+            </div>
+            </li>
+            </ul>
+        </div>
         </li>
-        <li>
-            <b>Accessibility:</b> State 3 ways in which your site is accessible to those with different abilities and
-            needs
-            (for
-            example those with visual impairment)
-        </li>
-        <li>
-            <b>Usability:</b> State 3 ways in which you considered the usability of your site.
-        </li>
-        <li>
-            <b>Learning:</b> state 3 things you had to learn or find out to create your site. How did you achieve that?
-        </li>
-        <li>
-            <b>Evaluation I:</b> What aspects of your work do you think were particularly successful? Why?
-        </li>
-        <li>
-            <b>Evaluation II:</b> What aspects of your work could be improved? How might you do things differently
-            another
-            time?
-        </li>
-        <li>
-            <b>Resources:</b> What resources did you use in your work? List any sources of information, libraries,
-            plugins,
-            code or
-            tools (you should also indicate inclusions from other sources within your code using comments)
-        </li>
-        <li>
-            <b>Appendices:</b> Site map, wireframes and mock-ups
-        </li>
-    </ol>
+        </ol>
+    </div>
+    </div>
+    <!-- A Footer Partial Could Be Found In   (js/partials/footer.js) -->
+    <div id="container-footer">
+        <script id="footer-template" type="text/x-handlebars-template">
+                        {{>footer }}
+            </script>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br class="clear">
+    </div> <!-- For the Transition menu -->
 </body>
+<!-- Importing all the javascript files that are needed for the website to work. -->
+<script src="js/handlebarHeplers.js" type="text/javascript"></script>
+<script src="js/partials/header.js" type="text/javascript"></script>
+<script src="js/partials/nav.js" type="text/javascript"></script>
+<script src="js/partials/footer.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="js/classie.js" type="text/javascript"></script>
+<script src="js/sidebarEffects.js" type="text/javascript"></script>
+<script src="js/js.js" type="text/javascript"></script>
+
 
 </html>

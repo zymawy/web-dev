@@ -5,7 +5,7 @@ Handlebars.registerPartial('footer', `<section class="container-fluid" id="foote
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4 col-sm-12 footer-block" id="footer-nav">
-                                <h2>News Sections</h2>
+                                <h2>Site Map</h2>
                                 <nav class="footer-nav">
                                     <li><a class="active-nav" href="/">Home</a></li>
                                     <li><a href="/contact.html">Contact Us</a></li>

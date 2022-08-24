@@ -9,7 +9,7 @@
  */
 function doSearch(inputId = 'search', inputText = 'searchKeyword') {
     let searchButton = document.getElementById(inputId), searchKeyword = document.getElementById(inputText);
-    const checkValidation  = () => {
+    const checkValidation = () => {
         // let's get the value of the input of the search
         let value = searchKeyword.value;
         // let's check if the value has some value if not let's notify our customer !
@@ -31,39 +31,39 @@ function doSearch(inputId = 'search', inputText = 'searchKeyword') {
 
     searchButton.addEventListener('click', (e) => {
         e.preventDefault();
-         checkValidation();
+        checkValidation();
     })
     searchKeyword.addEventListener('keypress', (e) => {
-    if (e.key !== 'Enter') return e;
-    checkValidation();
+        if (e.key !== 'Enter') return e;
+        checkValidation();
     })
 }
 
 /* It's fetching the data from the json file and then it's doing something with it. */
 fetch('/data/articles.json')
-.then(response => {
-    if (!response.ok) {
-        throw new Error("HTTP error " + response.status);
-    }
-    return response.json();
-})
-.then(response => {
-    // let's get going and notify our main class :)
-    const DataNewsEventLoaded = new CustomEvent('news-data-loaded', {
-        bubbles: true, detail: {
-            data: () => response
-            // taken from https://stackoverflow.com/a/46545530/6531160 to shuffle our news randomly
-            .map(value => ({value, sort: Math.random()}))
-            .sort((a, b) => a.sort - b.sort)
-            .map(({value}) => value)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
         }
-    });
-    // let's dispatch it !
-    document.dispatchEvent(DataNewsEventLoaded)
-})
-.catch(err => {
-    console.log(err)
-})
+        return response.json();
+    })
+    .then(response => {
+        // let's get going and notify our main class :)
+        const DataNewsEventLoaded = new CustomEvent('news-data-loaded', {
+            bubbles: true, detail: {
+                data: () => response
+                    // taken from https://stackoverflow.com/a/46545530/6531160 to shuffle our news randomly
+                    .map(value => ({ value, sort: Math.random() }))
+                    .sort((a, b) => a.sort - b.sort)
+                    .map(({ value }) => value)
+            }
+        });
+        // let's dispatch it !
+        document.dispatchEvent(DataNewsEventLoaded)
+    })
+    .catch(err => {
+        console.log(err)
+    })
 
 // JavaScript Document
 $(function () {
@@ -92,13 +92,6 @@ $(function () {
         $(this).parent().parent().find(".poll-options").toggle(500);
         $(this).parent().toggle(100);
     })
-
-    /* It's adding an event listener to the element with the attribute `data-toggle="lightbox"` and when the element is
-    clicked it prevents the default action of the element and it calls the function `ekkoLightbox()` on the element. */
-    $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-    });
 });
 // lets init our search inputs
 doSearch();
