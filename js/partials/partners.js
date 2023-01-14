@@ -11,25 +11,25 @@ Handlebars.registerPartial('partners', `
     </div>
         <div class="col-md-12 slide-holder" id="partners-items">
             <div class="slide-item partner-entry contain">
-                <a href="#"><img src="/assets/images/temp/partners/01.png" alt="Project Thmb"></a>
+                <a href="#"><img src="assets/images/temp/partners/01.png" alt="Project Thmb"></a>
             </div>
             <div class="slide-item partner-entry contain">
-                <a href="#"><img src="/assets/images/temp/partners/02.png" alt="Project Thmb"></a>
+                <a href="#"><img src="assets/images/temp/partners/02.png" alt="Project Thmb"></a>
             </div>
             <div class="slide-item partner-entry contain">
-                <a href="#"><img src="/assets/images/temp/partners/03.png" alt="Project Thmb"></a>
+                <a href="#"><img src="assets/images/temp/partners/03.png" alt="Project Thmb"></a>
             </div>
             <div class="slide-item partner-entry contain">
-                <a href="#"><img src="/assets/images/temp/partners/04.png" alt="Project Thmb"></a>
+                <a href="#"><img src="assets/images/temp/partners/04.png" alt="Project Thmb"></a>
             </div>
             <div class="slide-item partner-entry contain">
-                <a href="#"><img src="/assets/images/temp/partners/01.png" alt="Project Thmb"></a>
+                <a href="#"><img src="assets/images/temp/partners/01.png" alt="Project Thmb"></a>
             </div>
             <div class="slide-item partner-entry contain">
-                <a href="#"><img src="/assets/images/temp/partners/04.png" alt="Project Thmb"></a>
+                <a href="#"><img src="assets/images/temp/partners/04.png" alt="Project Thmb"></a>
             </div>
             <div class="slide-item partner-entry contain">
-                <a href="#"><img src="/assets/images/temp/partners/02.png" alt="Project Thmb"></a>
+                <a href="#"><img src="assets/images/temp/partners/02.png" alt="Project Thmb"></a>
             </div>
         </div>
     </div>

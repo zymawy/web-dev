@@ -9,7 +9,7 @@ Handlebars.registerPartial('header', `<header class="container-fluid" id="main-h
                                 <button data-effect="st-effect-3" id="nav-tr"></button>
                             </li>
                             <li id="news-name">
-                                <a href='/'> <h1 id="news-head-name">{{ title }}</h1></a>
+                                <a href=''> <h1 id="news-head-name">{{ title }}</h1></a>
                                 <h2 id="news-head-slogan">{{ subTitle }}</h2>
                             </li>
                         </ul>

@@ -26,7 +26,7 @@ function doSearch(inputId = 'search', inputText = 'searchKeyword') {
             return false;
         }
 
-        window.location.href = '/search.html?search=' + value;
+        window.location.href = 'search.html?search=' + value;
     }
 
     searchButton.addEventListener('click', (e) => {

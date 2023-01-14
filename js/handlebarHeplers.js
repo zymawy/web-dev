@@ -49,11 +49,11 @@ Handlebars.registerHelper('buildUrl', (n, source, options) => {
     // generate url upon source, and for reuse-ability ..
     switch (source) {
         case 'news':
-            return '/article.html?' + slugify(n.title) + '&id=' + n.id;
+            return 'article.html?' + slugify(n.title) + '&id=' + n.id;
         case 'search':
-            return '/search.html?search=' + n.tagsStr;
+            return 'search.html?search=' + n.tagsStr;
         default:
-            return '/'
+            return ''
     }
 });
 
