@@ -9,7 +9,7 @@ Handlebars.registerPartial('featuredNews', `<section class="container" id="lates
                                     <i class="fa-solid fa-newspaper"></i>
                                     Featured News
                                 </h1>
-                                <a href="/articles.html?q=featuredNews" class="btn btn-lg btn-red">Archive</a>
+                                <a href="articles.html?q=featuredNews" class="btn btn-lg btn-red">Archive</a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ Handlebars.registerPartial('featuredNews', `<section class="container" id="lates
                             <div class="col-xs-6 more-news-block" >
                                 <a href="{{ buildUrl this 'news' }}" class="more-news-img"><img src="{{ image }}" alt="{{ title }}"></a>
                                 <a href="{{ buildUrl this 'news' }}"><h3 class="red-title title-trimmed">{{ title }}</h3></a>
-                                <p>Added At: {{formatDate createdAt }} | Category: <a href="/article.html?id={{ id }}" class="red-title">{{ tagsStr }}</a> </p>
+                                <p>Added At: {{formatDate createdAt }} | Category: <a href="article.html?id={{ id }}" class="red-title">{{ tagsStr }}</a> </p>
                             </div>
                         {{/each }}
                             </div>

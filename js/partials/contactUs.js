@@ -60,6 +60,6 @@ contactForm.addEventListener('submit', (e) => {
 
     alert(`${localStorage.getItem('full_name')}, thank you for contact us, please check your email,`);
 
-    location.href = '/';
+    location.href = '';
 
 });

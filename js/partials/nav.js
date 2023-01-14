@@ -4,42 +4,42 @@ Handlebars.registerPartial('nav', `<nav class="st-menu st-effect-3" id="main-nav
     <ul>
         <li>
         {{#if (isCurrent 'index') }}
-            <a  class="active-nav" href="/">Home</a>
+            <a  class="active-nav" href="">Home</a>
         {{else}}
-            <a href="/">Home</a>
+            <a href="">Home</a>
         {{/if}}
         </li>
         <li>
         {{#if (isCurrent 'contact') }}
-            <a class="active-nav" href="/contact.html">Contact Us</a>
+            <a class="active-nav" href="contact.html">Contact Us</a>
             {{else}}
-            <a href="/contact.html">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         {{/if}}
         </li>
         <li>
         {{#if (isCurrent 'articles') }}
-            <a class="active-nav" href="/articles.html">News</a>
+            <a class="active-nav" href="articles.html">News</a>
             {{else}}
-            <a href="/articles.html">News</a>
+            <a href="articles.html">News</a>
          {{/if}}
         </li>
         <li>
         {{#if (isCurrent 'report') }}
-            <a class="active-nav" href="/report.html">Report</a>
+            <a class="active-nav" href="report.html">Report</a>
             {{else}}
-            <a href="/report.html">Report</a>
+            <a href="report.html">Report</a>
          {{/if}}
         </li>
     </ul>
     <ul id="mo-social-links">
         <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                    src="/assets/images/ics/fb.png" alt="Faecbook"> </a> </li>
+                    src="assets/images/ics/fb.png" alt="Faecbook"> </a> </li>
         <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                    src="/assets/images/ics/tw.png" alt="Twitter"> </a> </li>
+                    src="assets/images/ics/tw.png" alt="Twitter"> </a> </li>
         <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                    src="/assets/images/ics/yt.png" alt="Youtube"> </a> </li>
+                    src="assets/images/ics/yt.png" alt="Youtube"> </a> </li>
         <li class="mo-social-links-li"><a class="mo-social-links-a" href="#"><img
-                    src="/assets/images/ics/in.png" alt="Instagram"> </a> </li>
+                    src="assets/images/ics/in.png" alt="Instagram"> </a> </li>
         <br class="clear"><br>
         <div class="input-group">
             <input type="text" id='searchKeywordMobile' class="form-control" placeholder="Search...">

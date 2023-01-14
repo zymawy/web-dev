@@ -3,7 +3,7 @@ Handlebars.registerPartial('search', ` <div class="col-md-8" id="content-bar">
     <br class="clear">
     <div class="page-inner-header" id="gallery-inner-header">
         <img class="block-icon f-right" style="margin-right:20px;"
-            src="/assets/images/ics/search-big-ic.png" alt="Big Icon">
+            src="assets/images/ics/search-big-ic.png" alt="Big Icon">
         <h1 class="uk-article-title f-right">Search Results</h1>
         <br class="clear">
     </div>

@@ -1,7 +1,7 @@
 /* It's a partial template, it's a template that we can use in other templates */
 Handlebars.registerPartial('singleNew', ` <article class="uk-article">
     <h1 class="uk-article-title green-title mb-20">{{ singleNew.title }}</h1>
-    <p class="uk-article-meta">Date Added: {{formatDate singleNew.createdAt }} | Category: <a href="/search.html?search={{ singleNew.tagsStr }}">{{ singleNew.tagsStr }}</a> </p>
+    <p class="uk-article-meta">Date Added: {{formatDate singleNew.createdAt }} | Category: <a href="search.html?search={{ singleNew.tagsStr }}">{{ singleNew.tagsStr }}</a> </p>
     <p class="uk-article-lead"><img class="img-responsive"
             src="{{ singleNew.image }}" alt="{{ singleNew.title }}"></p>
             <p>{{safe singleNew.description }} </p>
