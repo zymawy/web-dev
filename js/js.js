@@ -40,7 +40,7 @@ function doSearch(inputId = 'search', inputText = 'searchKeyword') {
 }
 
 /* It's fetching the data from the json file and then it's doing something with it. */
-fetch('/data/articles.json')
+fetch('data/articles.json')
     .then(response => {
         if (!response.ok) {
             throw new Error("HTTP error " + response.status);
